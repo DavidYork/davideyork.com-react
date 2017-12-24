@@ -47,7 +47,11 @@ export default () => (
     <AppStyles>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <Link to="/tag/indie">Indie</Link>
+        <Link to="/tag/procedural-generation">Procedural Generation</Link>
+        <Link to="/tag/work">Work</Link>
+        <Link to="/tag/gamedev">Gamedev</Link>
+        <Link to="/about">Who am I?</Link>
         <Link to="/test-blog">Test Blog</Link>
       </nav>
       <div className="content">
