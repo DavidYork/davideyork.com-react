@@ -1,0 +1,7 @@
+{
+    "route": "drunken-walk-procedural-algorithm",
+    "title": "Procedural Generation: Drunken Walk",
+    "oneLiner": "This is a fundamental technique for procedurally generating rooms and dungeons.",
+    "date": "2015-02-08 20:10:36",
+    "tags": ["game-development", "procedural-content", "programming", "rogue-like", "independent-game-development"]
+}

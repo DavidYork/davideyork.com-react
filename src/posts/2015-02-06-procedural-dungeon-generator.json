@@ -1,0 +1,7 @@
+{
+    "route": "drunken-room-placement",
+    "title": "Procedural Generation: Dungeon Room Placement",
+    "oneLiner": "This is procedural generation technique used to place rooms in a dungeon",
+    "date": "2015-02-06 20:10:36",
+    "tags": ["game-development", "procedural-content", "programming", "rogue-like", "independent-game-development"]
+}

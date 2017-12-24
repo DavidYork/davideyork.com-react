@@ -1,0 +1,7 @@
+{
+    "route": "recursive-drunken-walk",
+    "title": "Procedural Generation: Recursive Drunken Walk",
+    "oneLiner": "This is a procedural dungeon generation technique for filling an area with rooms and corridors",
+    "date": "2015-02-29 20:10:36",
+    "tags": ["game-development", "procedural-content", "programming", "rogue-like", "independent-game-development"]
+}

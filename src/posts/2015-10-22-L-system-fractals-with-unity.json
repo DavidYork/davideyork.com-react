@@ -1,0 +1,7 @@
+{
+    "route": "fractal-generation-with-unity",
+    "title": "L-System Fractal Generation with Unity",
+    "oneLiner": "This is a simple technique to create L-System fractals with Unity",
+    "date": "2015-10-22 16:10:00",
+    "tags": ["procedural-content", "programming", "fractals"]
+}

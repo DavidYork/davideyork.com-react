@@ -16,12 +16,13 @@ export default {
 
     // These are top-level, not children of "domain.com/blog/..."
     var postRoutes = allPosts.map( x => {
+      const meta = JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8'));
       return {
-        path: x,
+        path: meta.route,
         component: 'src/containers/TestMD',
         getProps: () => ({
           markdown: markdown.toHTML(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
-          metadata: JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8')),
+          metadata: meta,
         })
       }
     });
