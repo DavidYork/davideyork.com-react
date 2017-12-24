@@ -8,11 +8,12 @@ import allPosts from './src/posts/allPosts'
 const marked = require('marked')
 
 export default {
+
   getSiteProps: () => ({
     title: 'React Static',
   }),
+
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
 
     // These are top-level, not children of "domain.com/blog/..."
     var postRoutes = allPosts.map( x => {
@@ -36,6 +37,13 @@ export default {
         path: '/about',
         component: 'src/containers/About',
       },
+      {
+        path: '/test-blog',
+        component: 'src/containers/Blog',
+        getProps: () => ({
+          postRoutes,
+        }),
+      },
 
       ...postRoutes,
 
@@ -45,12 +53,14 @@ export default {
       },
     ];
   },
+
   renderToHtml: (render, Comp, meta) => {
     const sheet = new ServerStyleSheet()
     const html = render(sheet.collectStyles(<Comp />))
     meta.styleTags = sheet.getStyleElement()
     return html
   },
+
   Document: class CustomHtml extends Component {
     render () {
       const { Html, Head, Body, children, renderMeta } = this.props

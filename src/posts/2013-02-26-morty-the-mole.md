@@ -10,7 +10,7 @@ Highlights include:
 * Rewards for completing levels in a small number of moves
 * Hundreds of unique tiles
 
-![Over 100 levels](/content/images/morty1.png)
-![Tutorial levels guide the player early on](/content/images/morty2.png)
-![Many themes exist](/content/images/morty3.png)
+![Over 100 levels](/content/images/morty1.jpg)
+![Tutorial levels guide the player early on](/content/images/morty2.jpg)
+![Many themes exist](/content/images/morty3.jpg)
 ![Complex puzzle components keep the player interested](/content/images/morty4.png)

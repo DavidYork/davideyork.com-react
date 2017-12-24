@@ -3,15 +3,15 @@ import React from 'react'
 import { getRouteProps, Link } from 'react-static'
 //
 
-export default getRouteProps(({ posts }) => (
+export default getRouteProps(( props ) => (
   <div>
-    <h1>It's blog time.</h1>
+    <h1>Index of Articles</h1>
     <br />
     All Posts:
     <ul>
-      {posts.map(post => (
-        <li key={post.id}>
-          <Link to={`/blog/post/${post.id}/`}>{post.title}</Link>
+      {props.postRoutes.map(post => (
+        <li key={post.path}>
+          <Link to={`/${post.path}/`}>{post.path}</Link>
         </li>
       ))}
     </ul>
