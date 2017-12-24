@@ -13,6 +13,19 @@ export default {
   }),
   getRoutes: async () => {
     const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+
+    // These are top-level, not children of "domain.com/blog/..."
+    var postRoutes = allPosts.map( x => {
+      return {
+        path: x,
+        component: 'src/containers/TestMD',
+        getProps: () => ({
+          markdown: markdown.toHTML(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
+          metadata: JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8')),
+        })
+      }
+    });
+
     return [
       {
         path: '/',
@@ -22,33 +35,14 @@ export default {
         path: '/about',
         component: 'src/containers/About',
       },
-      {
-        path: '/testmd',
-        component: 'src/containers/TestMD',
-        getProps: () => ({
-          markdown: markdown.toHTML(fs.readFileSync('./src/posts/' + allPosts[0] + '.md', 'utf-8')),
-          metadata: JSON.parse(fs.readFileSync('./src/posts/' + allPosts[0] + '.json', 'utf-8')),
-        })
-      },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getProps: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getProps: () => ({
-            post,
-          }),
-        })),
-      },
+
+      ...postRoutes,
+
       {
         is404: true,
         component: 'src/containers/404',
       },
-    ]
+    ];
   },
   renderToHtml: (render, Comp, meta) => {
     const sheet = new ServerStyleSheet()
