@@ -14,7 +14,7 @@ Each rinse and repeat is called an "iteration."
 
 Would you like to know [more?][wikipedia]
 
-![/content/images/axiom.png](L-system fractal axiom) and generator: ![/content/images/generator.png](L-system fractal generator)
+![L-system fractal axiom](/content/images/axiom.jpg) and generator: ![L-system fractal generator](/content/images/generator.jpg)
 
 which, in the cases of these pyramids creates what's called a [Sierpinski Pyramid][sierpinski].
 
@@ -38,14 +38,14 @@ Yes, these offsets and scale factors (and rotation as well) can be encoded in th
 ### Maya representation of a generator
 
 So we are going to create this:
-![/content/images/tree_of_glitch_truth.png](L-system fractal tree)
+![L-system fractal tree](/content/images/tree_of_glitch_truth.jpg)
 
 By creating the following two generators:
 
 End branch:
-![/content/images/endbranch.png](L-system fractal end branch generator)
+![L-system fractal end branch generator](/content/images/endbranch.jpg)
 Middle branch:
-![/content/images/middlebranch.png](L-system fractal middle branch generator)
+![L-system fractal middle branch generator](/content/images/middlebranch.jpg)
 
 
 We then load them up in Unity and create a script that iterates *n* times over a [GameObject][gameobject] looking for leaf nodes with a *name* that corresponds to the name of a generator.
@@ -53,7 +53,7 @@ Then when you find one, you [Destroy][destroy] it and replace it with a newly [I
 
 So have a look at what this looks like in Unity, with an attached script:
 
-![/content/images/unity_tree.png](L-system fractal tree setup in Unity)
+![L-system fractal tree setup in Unity](/content/images/unity_tree.jpg)
 
 
 Notice the [Transform][transform] in the [Inspector][inspector].
@@ -69,9 +69,9 @@ So there is a lot you can do with this.
 Essentially you can build a model in Maya, name nodes, and then replace those nodes with other models that have the same name (or, if you prefer, by any more sophisticated replacement algorithm you choose) to recursively create and define a more interesting creation.
 Use your imagination and think on that for a minute, it's pretty huge.
 
-![/content/images/tree_0.png](L-system fractal tree iteration 0)
-![/content/images/tree_1.png](L-system fractal tree iteration 1)
-![/content/images/tree_2.png](L-system fractal tree iteration 2)
+![L-system fractal tree iteration 0](/content/images/tree_0.jpg)
+![L-system fractal tree iteration 1](/content/images/tree_1.jpg)
+![L-system fractal tree iteration 2](/content/images/tree_2.jpg)
 
 
 **Have fun!**

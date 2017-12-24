@@ -1,4 +1,4 @@
-The [7DRL (7 Day Roguelike Challenge)(]http://www.roguebasin.com/index.php?title=7DRL) for 2016 has happened, and here is my entry!
+The [7DRL (7 Day Roguelike Challenge)](http://www.roguebasin.com/index.php?title=7DRL) for 2016 has happened, and here is my entry!
 It was a challenge to create this game in 7 days, but I'm quite proud of it.
 Of course, I feel I've only scratched the surface of what the game could become with more time, effort and polish.
 
@@ -8,8 +8,8 @@ You get rescued, and to show your gratitude you offer to upgrade the ship's engi
 Only problem is, you don't know how to do that so everything explodes.
 You have to get back to your escape pod before getting sucked out a hull breach or burnt alive!
 
-![/content/images/dgota-2.png](Don\'t Go Out The Airlock intro)
-![/content/images/dgota-1.png](Don\'t Go Out The Airlock gameplay)
+![Don\'t Go Out The Airlock intro](/content/images/dgota-2.jpg)
+![Don\'t Go Out The Airlock gameplay](/content/images/dgota-1.jpg)
 
 
 

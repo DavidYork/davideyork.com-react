@@ -8,10 +8,10 @@ I worked as a full-stack iOS + backeng engineer on [Bocksworld][blocksworld], cr
 
 Blocksworld is a free app with in-app purchases.
 
-![/content/images/blocksworld1.png](Popular creative block-based building game)
-![/content/images/blocksworld2.png](Popular creative block-based building game)
-![/content/images/blocksworld4.png](Popular creative block-based building game)
-![/content/images/blocksworld3.png](Popular creative block-based building game)
+![Popular creative block-based building game](/content/images/blocksworld1.jpg)
+![Popular creative block-based building game](/content/images/blocksworld2.jpg)
+![Popular creative block-based building game](/content/images/blocksworld4.jpg)
+![Popular creative block-based building game](/content/images/blocksworld3.jpg)
 
 [unity3d]: http://unity3d.com/
 [linden-lab]: http://www.lindenlab.com/

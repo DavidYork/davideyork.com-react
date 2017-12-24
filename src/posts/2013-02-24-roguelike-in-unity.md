@@ -8,6 +8,6 @@ I love [Unity][unity]!  One of my favorite aspects of Unity is my ability to wor
 * Randomly generated levels using several different generators
 * Dynamic line of sight
 
-!['Unity 3D rogue-like']('/images/unity3droguelike.png')
+![Unity 3D rogue-like](/content/images/unity3droguelike.jpg)
 
 [unity]: http://unity3d.com

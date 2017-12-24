@@ -18,11 +18,11 @@ Highlights include:
 * Stack-based UI menu system
 
 ![Hack &amp; Quest &quot;You got loot!&quot;](/content/images/hq_screenshot1.jpg)
-![Hack &amp; Quest Player stats](/content/images/hq_screenshot2.png)
-![Hack &amp; Quest &quot;Mad loot!&quot;](/content/images/hq_screenshot3.png)
-![Hack &amp; Quest desert landscape](/content/images/hq_screenshot4.png)
-![Hack &amp; Quest tundra landscape](/content/images/hq_screenshot5.png)
-![Hack &amp; Quest &quot;Death sucks!&quot;](/content/images/hq_screenshot6.png)
+![Hack &amp; Quest Player stats](/content/images/hq_screenshot2.jpg)
+![Hack &amp; Quest &quot;Mad loot!&quot;](/content/images/hq_screenshot3.jpg)
+![Hack &amp; Quest desert landscape](/content/images/hq_screenshot4.jpg)
+![Hack &amp; Quest tundra landscape](/content/images/hq_screenshot5.jpg)
+![Hack &amp; Quest &quot;Death sucks!&quot;](/content/images/hq_screenshot6.jpg)
 
 [app-store]: https://itunes.apple.com/us/app/hack-quest/id608247486
 [game-monetization-challenge]: http://www.ludumdare.com/compo/2011/09/28/announcing-october-challenge-2011/

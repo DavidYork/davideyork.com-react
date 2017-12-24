@@ -1,10 +1,10 @@
 I'm going to talk about how to get from images like these:
 
-![/content/images/map-ascii.png](ASCII map) ![/content/images/map-tiled.png](Tiled map)
+![ASCII map](/content/images/map-ascii.png) ![Tiled map](/content/images/map-tiled.png)
 
 to this:
 
-![/content/images/map-decorated.png](Decorated map)
+![Decorated map](/content/images/map-decorated.png)
 
 using what I call a _Decoration Generator_. The awesome tileset shown above was created by [Oryx Design Lab](http://oryxdesignlab.com) and is fantastic, I highly recommend checking it out.
 
@@ -33,7 +33,7 @@ This algorithm was used on the walls and water to take care of corners and edges
 
 For example:
 
-![/content/images/map-autotile.png](Autotiling)
+![Autotiling](/content/images/map-autotile.png)
 
 #### Shadow Casting
 This algorithm places shadows on tiles.
