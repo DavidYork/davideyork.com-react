@@ -4,8 +4,8 @@ Move in a random direction if and only if the next cell in that direction is sol
 Repeat until you are no longer able to move, or you have a large enough area that has been marked as empty
 that you are satisfied with the walk.
 
-![/content/images/pcg_drunken_walk_single.gif](Drunken walk)
-![/content/images/pcg_drunken_walk_single2.gif](Drunken walk)
+![Drunken walk](/content/images/pcg_drunken_walk_single.gif)
+![Drunken walk](/content/images/pcg_drunken_walk_single2.gif)
 
 
 You can use multiple walks to generate a more interesting area. The additional walks can start from an
@@ -13,8 +13,8 @@ open cell, or they can start from a closed cell and be allowed to "merge" into a
 would intersect with the cell.
 
 
-![/content/images/pcg_drunken_walk_multiple_10.gif](Drunken walks with 10 steps)
-![/content/images/pcg_drunken_walk_multiple_10_2.gif](Drunken walks with 10 steps)
+![Drunken walks with 10 steps](/content/images/pcg_drunken_walk_multiple_10.gif)
+![Drunken walks with 10 steps](/content/images/pcg_drunken_walk_multiple_10_2.gif)
 
 
 Note that this technique works well for generating areas that have open cells and wall cells as shown above, but it also works
@@ -22,15 +22,15 @@ for generating an area with areas with clear adjoining exits (e.g.: rooms). Simp
 connection leading from this cell the the previous one.
 
 
-![/content/images/pcg_drunken_walk_rooms_single.gif](Drunken walks with adjoining areas)
+![Drunken walks with adjoining areas](/content/images/pcg_drunken_walk_rooms_single.gif)
 
 
 Multiple drunken walks with adjoining areas requires an extra step for each subsequent walk to join the walks together.
 One option is to start walks after the first in one of the previously visited rooms (shown below).
 
 
-![/content/images/pcg_drunken_walk_rooms_multiple_1.gif](Drunken walks with adjoining areas)
-![/content/images/pcg_drunken_walk_rooms_multiple_2.gif](Drunken walks with 15 steps)
+![Drunken walks with adjoining areas](/content/images/pcg_drunken_walk_rooms_multiple_1.gif)
+![Drunken walks with 15 steps](/content/images/pcg_drunken_walk_rooms_multiple_2.gif)
 
 
 That is the drunken walk. There are many ways to tweak it worth experimenting with. For example when determining the random
