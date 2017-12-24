@@ -49,6 +49,7 @@ export default () => (
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>
+        <Link to="/testmd">Test Markdown</Link>
       </nav>
       <div className="content">
         <Routes />
