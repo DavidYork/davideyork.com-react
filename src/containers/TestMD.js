@@ -1,6 +1,10 @@
 import React from 'react'
 import { getRouteProps } from 'react-static'
 
-export default getRouteProps(({ markdown }) => (
-  <div dangerouslySetInnerHTML={{ __html: markdown }} />
+export default getRouteProps(( props ) => (
+    <div>
+        <h1>{ props.metadata.title }</h1>
+        <hr />
+        <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
+    </div>
 ))

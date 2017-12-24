@@ -26,6 +26,7 @@ export default {
         component: 'src/containers/TestMD',
         getProps: () => ({
           markdown: markdown.toHTML(fs.readFileSync('./src/posts/test.md', 'utf-8')),
+          metadata: JSON.parse(fs.readFileSync('./src/posts/test.json', 'utf-8')),
         })
       },
       {
