@@ -1,4 +1,4 @@
-![](youtube(url:'http://www.youtube.com/embed/6WrK-yxy90U', width:560, height:315))
+<iframe class="embed-youtube" max-width="560" max-height="315" src="http://www.youtube.com/embed/6WrK-yxy90U" frameborder="0" allowfullscreen=""></iframe>
 
 [Download from the Apple App Store here!][app-store]
 
