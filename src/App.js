@@ -3,6 +3,7 @@ import { Router, Link } from 'react-static'
 import styled, { injectGlobal } from 'styled-components'
 //
 import Routes from 'react-static-routes'
+import Footer from './containers/Footer'
 
 injectGlobal`
   body {
@@ -57,6 +58,7 @@ export default () => (
       <div className="content">
         <Routes />
       </div>
+      <Footer />
     </AppStyles>
   </Router>
 )
