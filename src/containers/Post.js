@@ -1,12 +1,10 @@
 import React from 'react'
-import { getRouteProps, Link } from 'react-static'
-//
+import { getRouteProps } from 'react-static'
 
-export default getRouteProps(({ post }) => (
-  <div>
-    <Link to="/blog/">{'<'} Back</Link>
-    <br />
-    <h3>{post.title}</h3>
-    <p>{post.body}</p>
-  </div>
+export default getRouteProps(( props ) => (
+    <div>
+        <h1>{ props.metadata.title }</h1>
+        <hr />
+        <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
+    </div>
 ))

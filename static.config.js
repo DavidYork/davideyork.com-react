@@ -2,7 +2,6 @@ import fs from 'fs'
 import axios from 'axios'
 import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
-import { markdown } from 'markdown'
 import allPosts from './src/posts/allPosts'
 
 const marked = require('marked')
@@ -20,9 +19,9 @@ export default {
       const meta = JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8'));
       return {
         path: meta.route,
-        component: 'src/containers/TestMD',
+        component: 'src/containers/Post',
         getProps: () => ({
-          markdown: markdown.toHTML(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
+          markdown: marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
           metadata: meta,
         })
       }
@@ -35,7 +34,11 @@ export default {
       },
       {
         path: '/about',
-        component: 'src/containers/About',
+        component: 'src/containers/Page',
+        getProps: () => ({
+          markdown: marked(fs.readFileSync('./src/pages/about.md', 'utf-8')),
+          metadata: JSON.parse(fs.readFileSync('./src/pages/about.json', 'utf-8'))
+        })
       },
       {
         path: '/test-blog',
