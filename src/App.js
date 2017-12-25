@@ -1,6 +1,7 @@
 import React from 'react'
 import { Router, Link } from 'react-static'
 import styled, { injectGlobal } from 'styled-components'
+import { Button, Container, Header } from 'semantic-ui-react'
 //
 import Routes from 'react-static-routes'
 import Footer from './containers/Footer'
@@ -59,6 +60,18 @@ export default () => (
         <Routes />
       </div>
       <Footer />
+
+      {/* Testing Semantic-UI */}
+      <Container>
+        <Header as='h1'>Hello world!</Header>
+
+        <Button
+          content='Discover docs'
+          href='https://react.semantic-ui.com'
+          icon='github'
+          labelPosition='left'
+        />
+      </Container>
     </AppStyles>
   </Router>
 )
