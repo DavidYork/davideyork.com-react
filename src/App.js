@@ -5,6 +5,7 @@ import { Button, Container, Header } from 'semantic-ui-react'
 //
 import Routes from 'react-static-routes'
 import Footer from './containers/Footer'
+import TopNav from './containers/TopNav'
 
 injectGlobal`
   body {
@@ -18,23 +19,6 @@ injectGlobal`
 `
 
 const AppStyles = styled.div`
-  a {
-    text-decoration: none;
-    color: #108db8;
-    font-weight: bold;
-  }
-
-  nav {
-    width: 100%;
-    background: #108db8;
-
-    a {
-      color: white;
-      padding: 1rem;
-      display: inline-block;
-    }
-  }
-
   .content {
     padding: 1rem;
   }
@@ -47,15 +31,7 @@ const AppStyles = styled.div`
 export default () => (
   <Router>
     <AppStyles>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/tag/indie">Indie</Link>
-        <Link to="/tag/procedural-generation">Procedural Generation</Link>
-        <Link to="/tag/work">Work</Link>
-        <Link to="/tag/gamedev">Gamedev</Link>
-        <Link to="/about">Who am I?</Link>
-        <Link to="/test-blog">Test Blog</Link>
-      </nav>
+      <TopNav />
       <div className="content">
         <Routes />
       </div>

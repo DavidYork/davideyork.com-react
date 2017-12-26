@@ -27,4 +27,4 @@ Highlights include:
 [app-store]: https://itunes.apple.com/us/app/hack-quest/id608247486
 [game-monetization-challenge]: http://www.ludumdare.com/compo/2011/09/28/announcing-october-challenge-2011/
 [le-pixelists]: http://lepixelists.deviantart.com/
-[mm3]: http://www.lemonamiga.com/games/docs.php?id=1093
+[mm3]: https://www.giantbomb.com/might-and-magic-iii-isles-of-terra/3030-12559/
