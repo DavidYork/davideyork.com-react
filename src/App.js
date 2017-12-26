@@ -32,22 +32,8 @@ export default () => (
   <Router>
     <AppStyles>
       <TopNav />
-      <div className="content">
-        <Routes />
-      </div>
+      <Routes />
       <Footer />
-
-      {/* Testing Semantic-UI */}
-      <Container>
-        <Header as='h1'>Hello world!</Header>
-
-        <Button
-          content='Discover docs'
-          href='https://react.semantic-ui.com'
-          icon='github'
-          labelPosition='left'
-        />
-      </Container>
     </AppStyles>
   </Router>
 )
