@@ -8,10 +8,7 @@ You get rescued, and to show your gratitude you offer to upgrade the ship's engi
 Only problem is, you don't know how to do that so everything explodes.
 You have to get back to your escape pod before getting sucked out a hull breach or burnt alive!
 
-![Don\'t Go Out The Airlock intro](/content/images/dgota-2.jpg)
-![Don\'t Go Out The Airlock gameplay](/content/images/dgota-1.jpg)
-
-
+<img src="/content/images/dgota-2.jpg" alt="Don't go out the Airlock intro" class="img-inline-left"><img src="/content/images/dgota-1.jpg" alt="Don't go out the Airlock gameplay" class="img-inline-right">
 
 The game is completely free and available for dowload for Windows and MacOS:
 
