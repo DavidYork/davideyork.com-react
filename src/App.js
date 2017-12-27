@@ -16,6 +16,31 @@ injectGlobal`
     padding: 0;
     color: #262626;
   }
+
+  h1 {
+    font-weight: bold;
+    font-size: 42px;
+    font-family: "Roboto Slab", "Titillium Web", sans-serif;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  * {
+    font-family: 'Proxima Nova','Helvetica Neue','Helvetica',sans-serif;
+  }
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+  img {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 360px;
+  }
+
 `
 
 export default () => (

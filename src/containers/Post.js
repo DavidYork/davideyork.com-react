@@ -8,24 +8,8 @@ import ShareList from './ShareList'
 
 const PostStyles = styled.div`
   h1 {
-    font-weight: bold;
-    font-size: 42px;
-    font-family: "Roboto Slab", "Titillium Web", sans-serif;
-    margin-top: 50px;
-    margin-bottom: 30px;
-  }
-  * {
-    font-family: 'Proxima Nova','Helvetica Neue','Helvetica',sans-serif;
-  }
-  .content {
-    padding: 1rem;
-  }
-  img {
-    width: 100%;
-  }
-  iframe {
-    width: 100%;
-    height: 360px;
+    // margin-top: 50px;
+    // margin-bottom: 30px;
   }
 `
 
