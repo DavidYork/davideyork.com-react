@@ -16,7 +16,7 @@ const PostStyles = styled.div`
 
 export default getRouteProps(( props ) => (
   <PostStyles>
-    <Banner />
+    <Banner image={ props.metadata.image }/>
     <Container >
       <div className='content'>
         <h1>{ props.metadata.title }</h1>
