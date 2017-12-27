@@ -22,7 +22,6 @@ const FollowLinkStyles = styled.div`
 
 export default class FollowLink extends Component {
   render() {
-    console.log(this.props);
     return (
       <FollowLinkStyles>
         <p>

@@ -6,10 +6,13 @@ import { Link } from 'react-static'
 const TagListStyles = styled.div`
   a {
     color: #000;
+    font-weight: 400;
+  }
+  a:hover {
+    color: #4183c4; // TODO: Get from semantic-ui-react
   }
   .taglist {
     margin-top: 20px;
-    // margin-bottom: 10px;
   }
 `
 
