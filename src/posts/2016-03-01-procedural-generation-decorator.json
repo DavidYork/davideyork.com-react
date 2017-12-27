@@ -3,5 +3,6 @@
     "title": "Making Procedural Content Look GREAT",
     "oneLiner": "This converts plain \"walls and doors\" output into something that looks awesome",
     "date": "2016-03-01 20:10:36",
+    "image": "/content/images/map-decorated-big.png",
     "tags": ["game-development", "procedural-content", "programming", "rogue-like", "independent-game-development"]
 }

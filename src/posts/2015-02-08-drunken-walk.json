@@ -3,5 +3,6 @@
     "title": "Procedural Generation: Drunken Walk",
     "oneLiner": "This is a fundamental technique for procedurally generating rooms and dungeons.",
     "date": "2015-02-08 20:10:36",
+    "image": "../content/images/pcg_drunken_walk_rooms_single-1.gif",
     "tags": ["game-development", "procedural-content", "programming", "rogue-like", "independent-game-development"]
 }
