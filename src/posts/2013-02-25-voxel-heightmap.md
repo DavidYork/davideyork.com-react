@@ -4,8 +4,7 @@ I thought it would be cool to play with voxel heightmaps so I created a voxel he
 
 Note this was long before [Minecraft][minecraft], before [Delver][delver] and certainly before [Voxels][voxels] were cool.
 
-![Real-time voxel heightmap](/content/images/voxels1.jpg)
-![My voxels are smaller than Minecraft :)](/content/images/voxels2.jpg)
+<img class='img-inline-left' alt="Real-time voxel heightmap" src="/content/images/voxels1.jpg"><img class='img-inline-right' alt="My voxels are smaller than Minecraft :)" src="/content/images/voxels2.jpg">
 
 [minecraft]: http://minecraft.net/
 [delver]: http://www.delvergame.com/

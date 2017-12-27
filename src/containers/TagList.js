@@ -7,6 +7,8 @@ const TagListStyles = styled.div`
   a {
     color: #000;
     font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
   }
   a:hover {
     color: #4183c4; // TODO: Get from semantic-ui-react

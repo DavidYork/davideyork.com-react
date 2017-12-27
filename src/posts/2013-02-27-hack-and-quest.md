@@ -17,12 +17,9 @@ Highlights include:
 * RPG stats, chests, leveling system, combat mechanics
 * Stack-based UI menu system
 
-![Hack &amp; Quest &quot;You got loot!&quot;](/content/images/hq_screenshot1.jpg)
-![Hack &amp; Quest Player stats](/content/images/hq_screenshot2.jpg)
-![Hack &amp; Quest &quot;Mad loot!&quot;](/content/images/hq_screenshot3.jpg)
-![Hack &amp; Quest desert landscape](/content/images/hq_screenshot4.jpg)
-![Hack &amp; Quest tundra landscape](/content/images/hq_screenshot5.jpg)
-![Hack &amp; Quest &quot;Death sucks!&quot;](/content/images/hq_screenshot6.jpg)
+<img class="img-inline-left" alt="Hack & Quest &quot;You got loot!&quot;" src="/content/images/hq_screenshot1.jpg"><img class="img-inline-right" alt="Hack & Quest Player stats" src="/content/images/hq_screenshot2.jpg">
+<img class="img-inline-left" alt="Hack & Quest &quot;Mad loot!&quot;" src="/content/images/hq_screenshot3.jpg"><img class="img-inline-right" alt="Hack & Quest desert landscape" src="/content/images/hq_screenshot4.jpg">
+<img class="img-inline-left" alt="Hack & Quest tundra landscape" src="/content/images/hq_screenshot5.jpg"><img class="img-inline-right" alt="Hack & Quest &quot;Death sucks!&quot;" src="/content/images/hq_screenshot6.jpg">
 
 [app-store]: https://itunes.apple.com/us/app/hack-quest/id608247486
 [game-monetization-challenge]: http://www.ludumdare.com/compo/2011/09/28/announcing-october-challenge-2011/

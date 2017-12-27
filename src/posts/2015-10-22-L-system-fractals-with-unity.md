@@ -3,18 +3,23 @@ A was hanging out with my awesome friend [Anatomecha][anatomecha] in one of Seat
 He showed me a system he had been working on to create l-system fractals with Unity using very simple properties of how Maya and Unity represent 3D models in 3D space.
 
 Best.
+
 Night.
+
 Ever!
 
 I like beer and fractals because they are both awesome, what can I say?
 
-For the uninitiated an l-system fractal is basically where you take a shape, lets call it an "axiom", then you replace the axiom with another shape, let's call that a "generator" which just so happens to be made up of a bunch of axioms.
+For the uninitiated an L-system fractal is basically where you take a shape, lets call it an "axiom", then you replace the axiom with another shape, let's call that a "generator" which just so happens to be made up of a bunch of axioms.
+
 Rinse and repeat until you have created a self-referential fractal of pure awesomeness.
 Each rinse and repeat is called an "iteration."
 
-Would you like to know [more?][wikipedia]
+[Would you like to know more?][wikipedia]
 
-![L-system fractal axiom](/content/images/axiom.jpg) and generator: ![L-system fractal generator](/content/images/generator.jpg)
+So axiom, and generator:
+
+<img class="img-inline-left" alt="L-system fractal axiom" src="/content/images/axiom.jpg"><img class="img-inline-right" alt="L-system fractal generator" src="/content/images/generator.jpg">
 
 which, in the cases of these pyramids creates what's called a [Sierpinski Pyramid][sierpinski].
 
@@ -30,9 +35,11 @@ If you create a hierarchical model in Maya which is meant to be a generator, and
 Piece of cake right?
 
 Essentially, yes.
+
 Note there are always details.
 The position, scale, and rotation of the models needs to be preserved.
 Notice how the Sierpinsky Pyramid replaces a large pyramid with four smaller ones at various offsets?
+
 Yes, these offsets and scale factors (and rotation as well) can be encoded in the Maya model trivially which will be explained now.
 
 ### Maya representation of a generator
@@ -42,13 +49,12 @@ So we are going to create this:
 
 By creating the following two generators:
 
-End branch:
-![L-system fractal end branch generator](/content/images/endbranch.jpg)
-Middle branch:
-![L-system fractal middle branch generator](/content/images/middlebranch.jpg)
+<img class="img-inline-left" alt="L-system fractal end branch generator" src="/content/images/endbranch.jpg"><img class="img-inline-right" alt="L-system fractal middle branch generator" src="/content/images/middlebranch.jpg">
 
+Left: end branch, right: middle branch.
 
 We then load them up in Unity and create a script that iterates *n* times over a [GameObject][gameobject] looking for leaf nodes with a *name* that corresponds to the name of a generator.
+
 Then when you find one, you [Destroy][destroy] it and replace it with a newly [Instantiated][instantiate] instance of the generator of that name.
 
 So have a look at what this looks like in Unity, with an attached script:
@@ -66,12 +72,12 @@ You may notice the leaf nodes have names like <code>end\_branch\_\_0</code> with
 
 ### So....
 So there is a lot you can do with this.
+
 Essentially you can build a model in Maya, name nodes, and then replace those nodes with other models that have the same name (or, if you prefer, by any more sophisticated replacement algorithm you choose) to recursively create and define a more interesting creation.
+
 Use your imagination and think on that for a minute, it's pretty huge.
 
-![L-system fractal tree iteration 0](/content/images/tree_0.jpg)
-![L-system fractal tree iteration 1](/content/images/tree_1.jpg)
-![L-system fractal tree iteration 2](/content/images/tree_2.jpg)
+<img class="img-inline-1-3" alt="L-system fractal tree iteration 0" src="/content/images/tree_0.jpg"><img class="img-inline-2-3" alt="L-system fractal tree iteration 1" src="/content/images/tree_1.jpg"><img class="img-inline-3-3" alt="L-system fractal tree iteration 2" src="/content/images/tree_2.jpg">
 
 
 **Have fun!**

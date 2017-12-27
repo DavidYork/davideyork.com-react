@@ -7,9 +7,10 @@ import TagList from './TagList'
 import ShareList from './ShareList'
 
 const PostStyles = styled.div`
-  h1 {
-    // margin-top: 50px;
-    // margin-bottom: 30px;
+  .img-group {
+    width:100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 `
 
