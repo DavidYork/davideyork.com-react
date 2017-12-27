@@ -15,6 +15,9 @@ const TagListStyles = styled.div`
     margin-top: 12px;
     text-align: center;
   }
+  span {
+    padding-right: 6px;
+  }
 `
 
 const shareTargets = [
@@ -25,7 +28,19 @@ const shareTargets = [
   {
     to:'https://twitter.com/share?text=GenGam%202016&url=http://davideyork.com/gengam-2016/',
     name:'twitter'
-  }
+  },
+  {
+    to:'https://plus.google.com/share?url=http://davideyork.com/gengam-2016/',
+    name:'google plus square'
+  },
+  {
+    to:'http://reddit.com/submit?url=http://davideyork.com/gengam-2016/&title=GenGam%202016',
+    name:'reddit'
+  },
+  {
+    to:'http://www.linkedin.com/shareArticle?mini=true&url=http://davideyork.com/gengam-2016/',
+    name:'linkedin'
+  },
 ];
 
 function share (target) {
