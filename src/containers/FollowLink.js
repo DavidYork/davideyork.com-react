@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Grid, Icon } from 'semantic-ui-react'
-import { Image } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 import { Link } from 'react-static'
 
 const FollowLinkStyles = styled.div`

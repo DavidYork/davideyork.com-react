@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Grid, Icon } from 'semantic-ui-react'
-import { Link } from 'react-static'
+import { Grid } from 'semantic-ui-react'
 import FollowLink from './FollowLink'
 
 const FooterStyles = styled.div`
