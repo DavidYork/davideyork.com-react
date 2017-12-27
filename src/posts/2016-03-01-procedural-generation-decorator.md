@@ -1,6 +1,6 @@
 I'm going to talk about how to get from images like these:
 
-![ASCII map](/content/images/map-ascii.png) ![Tiled map](/content/images/map-tiled.png)
+<img src="/content/images/map-ascii.png" alt="ASCII map" class="img-inline-left"><img src="/content/images/map-tiled.png" alt="Tiled map" class="img-inline-right">
 
 to this:
 
