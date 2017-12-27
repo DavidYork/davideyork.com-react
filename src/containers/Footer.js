@@ -46,7 +46,7 @@ const FooterStyles = styled.div`
 export default () => (
   <FooterStyles>
     <div className="footer">
-      <Container content >
+      <Container>
         <Grid divided='vertically' stackable >
           <Grid.Row columns={2}>
             <Grid.Column>

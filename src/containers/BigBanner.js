@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Image } from 'semantic-ui-react'
+import { Button, Image } from 'semantic-ui-react'
+import { Link } from 'react-static'
 
 const BannerStyles = styled.div`
   .banner {
@@ -15,6 +16,10 @@ const BannerStyles = styled.div`
     font-weight: 700;
     font-size: 40px;
     text-transform: capitalize;
+  }
+  .banner-button {
+    margin-top: 40px;
+    margin-bottom: 60px;
   }
   .banner-description {
     line-height: 2em;
@@ -44,27 +49,45 @@ const BannerStyles = styled.div`
 
 export default class BigBanner extends Component {
 
+  static defaultProps = {
+    title: 'David York',
+    description: 'Personal blog of David York, software engineer and indie game developer.',
+    image: 'http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png',
+    hideFace: false,
+    link: undefined,
+    linkText: ''
+  };
+
   getFace = (hide) => {
     if (hide) {
-      return (<Image className='my-face invisible' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
+      return (<Image className='my-face invisible' size='tiny' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
     } else {
       return (<Image className='my-face' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
     }
   }
 
+  getLink = (link, linkText) => {
+    if (link) {
+      return (<Button as={ Link } className='banner-button' to={ link } >{ linkText }</Button>);
+    } else {
+      return ;
+    }
+  }
+
   render() {
     const coverImageStyle = {
-      backgroundImage: 'url(http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png)',
+      backgroundImage: 'url(' + this.props.image + ')',
     }
 
     return (
       <BannerStyles>
         <div className="cover-image" style={ coverImageStyle } >
           <div className="shadow">
-            { this.getFace(this.props.hideFace) }
+            { this.getFace( this.props.hideFace ) }
             <div className="banner">
               <div className="banner-title">{ this.props.title }</div>
               <div className="banner-description">{ this.props.description }</div>
+              { this.getLink( this.props.link, this.props.linkText ) }
             </div>
           </div>
         </div>

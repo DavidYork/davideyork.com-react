@@ -32,7 +32,7 @@ const PostStyles = styled.div`
 export default getRouteProps(( props ) => (
   <PostStyles>
     <Banner />
-    <Container content>
+    <Container >
       <div className='content'>
         <h1>{ props.metadata.title }</h1>
         <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
