@@ -18,6 +18,9 @@ const TagListStyles = styled.div`
   span {
     padding-right: 6px;
   }
+  i {
+    color: #444;
+  }
 `
 
 const shareTargets = [

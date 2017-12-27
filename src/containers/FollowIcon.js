@@ -11,6 +11,9 @@ const FollowIconStyles = styled.span`
   i:hover {
     color: #4183c4; // TODO: Get from semantic-ui-react
   }
+  span {
+    float:right;
+  }
 `
 export default function (props) {
   return (

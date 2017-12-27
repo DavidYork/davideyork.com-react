@@ -17,7 +17,7 @@ export default class TopNav extends Component {
   state = { activeItem: '' }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name })
+    // this.setState({ activeItem: name })
   }
 
   render() {
@@ -26,7 +26,7 @@ export default class TopNav extends Component {
     return (
       <TopNavStyles>
         <nav>
-          <Menu pointing secondary>
+          <Menu stackable fixed='top' >
             <Menu.Item as={ Link } to='/' name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
             <Menu.Item as={ Link } to='/tags/indie' name='indie' active={activeItem === 'indie'} onClick={this.handleItemClick} />
             <Menu.Item as={ Link } to='/tags/procedural-generation' name='procedural generation' active={activeItem === 'procedural generation'} onClick={this.handleItemClick} />

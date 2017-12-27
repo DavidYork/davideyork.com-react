@@ -1,8 +1,12 @@
 import React from 'react'
-//
+import BigBanner from './BigBanner'
 
 export default () => (
   <div>
-    <h1>404 - Oh no's! We couldn't find that page :(</h1>
+    <BigBanner
+      hideFace
+      title='Page not found'
+      description="404 - Oh no's! We couldn't find that page :("
+    />
   </div>
 )

@@ -37,9 +37,20 @@ const BannerStyles = styled.div`
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .invisible {
+    visibility: hidden;
+  }
 `
 
 export default class BigBanner extends Component {
+
+  getFace = (hide) => {
+    if (hide) {
+      return (<Image className='my-face invisible' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
+    } else {
+      return (<Image className='my-face' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
+    }
+  }
 
   render() {
     const coverImageStyle = {
@@ -50,10 +61,10 @@ export default class BigBanner extends Component {
       <BannerStyles>
         <div className="cover-image" style={ coverImageStyle } >
           <div className="shadow">
-            <Image className='my-face' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />
+            { this.getFace(this.props.hideFace) }
             <div className="banner">
-              <div className="banner-title">David York</div>
-              <div className="banner-description">Personal blog of David York, software engineer and indie game developer.</div>
+              <div className="banner-title">{ this.props.title }</div>
+              <div className="banner-description">{ this.props.description }</div>
             </div>
           </div>
         </div>

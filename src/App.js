@@ -10,29 +10,20 @@ injectGlobal`
   body {
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
       'Lucida Grande', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 18px;
     margin: 0;
     padding: 0;
-  }
-`
-
-const AppStyles = styled.div`
-  .content {
-    padding: 1rem;
-  }
-
-  img {
-    max-width: 100%;
+    color: #262626;
   }
 `
 
 export default () => (
   <Router>
-    <AppStyles>
+    <div>
       <TopNav />
       <Routes />
       <Footer />
-    </AppStyles>
+    </div>
   </Router>
 )

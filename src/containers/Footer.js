@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Container } from 'semantic-ui-react'
 import FollowLink from './FollowLink'
 
 const FooterStyles = styled.div`
@@ -46,28 +46,30 @@ const FooterStyles = styled.div`
 export default () => (
   <FooterStyles>
     <div className="footer">
-      <Grid divided='vertically' stackable>
-        <Grid.Row columns={2}>
-          <Grid.Column>
-            <div className="grid-col">
-              <h3>About</h3>
-              <p>Hello, and thanks for visiting! I'm David York, a San Francisco software engineer. I've been programming and designing games since age 10.</p>
-              <p>My passions include game development, cooking, photography and travel.</p>
-              <p>I'm is currently working as a mobile (iOS and Android) consultant and indie game developer.</p>
-            </div>
-          </Grid.Column>
-          <Grid.Column>
-            <div className="grid-col">
-              <h3>Follow me</h3>
-              <FollowLink to='http://twitter.com/DavemanInSF' name='twitter' text='@DavemanInSF' />
-              <FollowLink to='http://www.linkedin.com/in/davideyork' name='linkedin' text='David York' />
-              <FollowLink to='mailto:david@davideyork.com' name='mail' text='david@davideyork.com' />
-              <FollowLink to='/rss' name='rss' text='RSS feed' />
-            </div>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <div className="copyright">© 2017 David York</div>
+      <Container content >
+        <Grid divided='vertically' stackable >
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <div className="grid-col">
+                <h3>About</h3>
+                <p>Hello, and thanks for visiting! I'm David York, a San Francisco software engineer. I've been programming and designing games since age 10.</p>
+                <p>My passions include game development, cooking, photography and travel.</p>
+                <p>I'm is currently working as a mobile (iOS and Android) consultant and indie game developer.</p>
+              </div>
+            </Grid.Column>
+            <Grid.Column>
+              <div className="grid-col">
+                <h3>Follow me</h3>
+                <FollowLink to='http://twitter.com/DavemanInSF' name='twitter' text='@DavemanInSF' />
+                <FollowLink to='http://www.linkedin.com/in/davideyork' name='linkedin' text='David York' />
+                <FollowLink to='mailto:david@davideyork.com' name='mail' text='david@davideyork.com' />
+                <FollowLink to='/rss' name='rss' text='RSS feed' />
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+        <div className="copyright">© 2017 David York</div>
+      </Container>
     </div>
   </FooterStyles>
 )

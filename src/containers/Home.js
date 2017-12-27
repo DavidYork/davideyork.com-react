@@ -6,6 +6,9 @@ import BigBanner from './BigBanner'
 
 export default getSiteProps(() => (
   <div>
-    <BigBanner />
+    <BigBanner
+      title='David York'
+      description='Personal blog of David York, software engineer and indie game developer.'
+    />
   </div>
 ))
