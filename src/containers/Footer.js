@@ -17,9 +17,11 @@ const FooterStyles = styled.div`
     padding-bottom: 40px;
     padding-top: 40px;
   }
-  .grid-col {
-    margin-left: 30px;
-    margin-right: 30px;
+  .grid-col-left {
+    margin-right: 1rem;
+  }
+  .grid-col-right {
+    margin-left: 1rem;
   }
   h3 {
     font-size: 23px;
@@ -47,10 +49,11 @@ export default () => (
   <FooterStyles>
     <div className="footer">
       <Container>
+        <div className='content'>
         <Grid divided='vertically' stackable >
           <Grid.Row columns={2}>
             <Grid.Column>
-              <div className="grid-col">
+              <div className="grid-col-left">
                 <h3>About</h3>
                 <p>Hello, and thanks for visiting! I'm David York, a San Francisco software engineer. I've been programming and designing games since age 10.</p>
                 <p>My passions include game development, cooking, photography and travel.</p>
@@ -58,7 +61,7 @@ export default () => (
               </div>
             </Grid.Column>
             <Grid.Column>
-              <div className="grid-col">
+              <div className="grid-col-right">
                 <h3>Follow me</h3>
                 <FollowLink to='http://twitter.com/DavemanInSF' name='twitter' text='@DavemanInSF' />
                 <FollowLink to='http://www.linkedin.com/in/davideyork' name='linkedin' text='David York' />
@@ -69,6 +72,7 @@ export default () => (
           </Grid.Row>
         </Grid>
         <div className="copyright">© 2017 David York</div>
+      </div>
       </Container>
     </div>
   </FooterStyles>
