@@ -14,7 +14,7 @@ const contentStyles={
 
 export default getRouteProps(( props ) => (
   <PageStyles>
-    <Banner />
+    <Banner image={ props.metadata.image }/>
     <Container>
       <div className='content' style={contentStyles}>
         <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
