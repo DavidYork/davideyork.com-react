@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Grid, Icon } from 'semantic-ui-react'
 import { Link } from 'react-static'
+import FollowLink from './FollowLink'
 
 const FooterStyles = styled.div`
   .copyright {
@@ -59,33 +60,11 @@ export default () => (
           <Grid.Column>
             <div className="grid-col">
               <h3>Follow me</h3>
-              <p>
-              <Link to='http://twitter.com/DavemanInSF'>
-                <Icon link name='twitter' size='huge' />
-                <span className='link-text'>@DavemanInSF</span>
-              </Link>
-              </p>
-
-              <p>
-              <Link to='http://www.linkedin.com/in/davideyork'>
-                <Icon link name='linkedin' size='huge' />
-                <span className='link-text'>David York</span>
-              </Link>
-              </p>
-
-              <p>
-              <Link to='mailto:david@davideyork.com'>
-                <Icon link name='mail' size='huge' />
-                <span className='link-text'>david@davideyork.com</span>
-              </Link>
-              </p>
-
-              <p>
-              <Link to='/rss'>
-                <Icon link name='rss' size='huge' />
-                <span className='link-text'>RSS feed</span>
-              </Link>
-              </p>
+              <FollowLink to='http://twitter.com/DavemanInSF' name='twitter' text='@DavemanInSF' />
+              <FollowLink to='http://www.linkedin.com/in/davideyork' name='linkedin' text='David York' />
+              <FollowLink to='mailto:david@davideyork.com' name='mail' text='david@davideyork.com' />
+              <FollowLink to='/rss' name='rss' text='RSS feed' />
+            </div>
           </Grid.Column>
         </Grid.Row>
       </Grid>
