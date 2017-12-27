@@ -44,7 +44,7 @@ const shareTargets = [
 ];
 
 function share (target) {
-  return ( <FollowIcon to={ target.to } name={ target.name } /> )
+  return ( <FollowIcon to={ target.to } name={ target.name } key={ target.name }/> )
 }
 
 export default function (props) {
