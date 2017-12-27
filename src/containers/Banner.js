@@ -15,9 +15,14 @@ const BannerStyles = styled.div`
 `
 
 export default class Banner extends Component {
+
+  static defaultProps = {
+    image: 'http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png'
+  };
+
   render() {
     const coverImageStyle = {
-      backgroundImage: 'url(http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png)',
+      backgroundImage: 'url(' + this.props.image + ')'// 'url(http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png)',
     }
 
     return (
