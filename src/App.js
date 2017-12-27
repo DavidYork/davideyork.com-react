@@ -1,8 +1,7 @@
 import React from 'react'
 import { Router, Link } from 'react-static'
 import styled, { injectGlobal } from 'styled-components'
-import { Button, Container, Header } from 'semantic-ui-react'
-//
+
 import Routes from 'react-static-routes'
 import Footer from './containers/Footer'
 import TopNav from './containers/TopNav'
