@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Button, Image } from 'semantic-ui-react'
 import { Link } from 'react-static'
+import { allPosts } from '../posts/allPosts'
 
 const BannerStyles = styled.div`
   .banner {

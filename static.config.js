@@ -10,6 +10,12 @@ export default {
 
   getSiteProps: () => ({
     title: 'React Static',
+    posts: allPosts,
+    metadata: allPosts.posts.map( x => {
+      const filename = './src/posts/' + x + '.json';
+      const meta = fs.readFileSync(filename, 'utf-8');
+      return JSON.parse(meta);
+    })
   }),
 
   siteRoot: 'http://davideyork.com',
@@ -17,7 +23,7 @@ export default {
   getRoutes: async () => {
 
     // These are top-level, not children of "domain.com/blog/..."
-    var postRoutes = allPosts.map( x => {
+    var postRoutes = allPosts.posts.map( x => {
       const meta = JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8'));
       return {
         path: meta.route,
@@ -75,6 +81,7 @@ export default {
           <Head>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>David York</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
             <link rel="stylesheet" href="/css/davideyork.css" />
             {renderMeta.styleTags}

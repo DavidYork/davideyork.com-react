@@ -1,4 +1,7 @@
-const allPosts = [
+// import fs from 'fs'
+
+export default {
+  posts: [
     // 'test',
     '2013-02-22-lode-runner-3d',
     '2013-02-23-kumax',
@@ -18,6 +21,9 @@ const allPosts = [
     '2016-03-01-procedural-generation-decorator',
     '2016-03-13-7drl-dont-go-out-the-airlock',
     '2016-11-26-gengam-2016',
-];
+  ],
 
-export default allPosts;
+  getMetadata( postname ) {
+    return { foo : "bar" }
+  }
+}
