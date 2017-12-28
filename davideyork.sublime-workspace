@@ -1,0 +1,1891 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"PostC",
+				"PostCardFlowStyles"
+			],
+			[
+				"link",
+				"linkText"
+			],
+			[
+				"alig",
+				"align-self"
+			],
+			[
+				"content",
+				"contentStyles"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"TopNav",
+				"TopNavStyles"
+			],
+			[
+				"Dav",
+				"DavemanInSF"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"Bann",
+				"BannerStyles"
+			],
+			[
+				"banner-",
+				"banner-description"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"onDra",
+				"OnDragStart\tAction<GameObject, Vector2>"
+			],
+			[
+				"Exe",
+				"IsExecuting\tbool { get; set; }"
+			],
+			[
+				"_fl",
+				"_flipTween\tPersistentFlipTween"
+			],
+			[
+				"Rem",
+				"Remove(T item)\tbool"
+			],
+			[
+				"IsEq",
+				"IsEquipped()\tbool"
+			],
+			[
+				"Damag",
+				"DamageRulePayload\tDamageRulePayload"
+			],
+			[
+				"Typ",
+				"DamageType\tDamageType"
+			],
+			[
+				"Dama",
+				"DamageRulePayload\tDamageRulePayload"
+			],
+			[
+				"OnCardIsEnt",
+				"OnCardIsEnteringPlaySelf\tPlayTrigger"
+			],
+			[
+				"DamageP",
+				"DamageRulePayload(DamageType type, bool piercing)\tDamageRulePayload(DamageType type, bool piercing)"
+			],
+			[
+				"CardIsBei",
+				"CardIsBeingDrawn\tPlayEvent"
+			],
+			[
+				"Des",
+				"DescribesEvent(IHasRules self, Combatant initiator, PlayEvent phase, CardInstance card)\tbool"
+			],
+			[
+				"Trigge",
+				"PlayTrigger\tPlayTrigger"
+			],
+			[
+				"DoI",
+				"DoICareAboutCardPlayEvent(CombatState state, IHasRules self, RulePayload payload, PlayEvent phase)\tbool"
+			],
+			[
+				"OnCardIsBeingDisc",
+				"OnThisCardIsBeingDiscarded\tPlayTrigger"
+			],
+			[
+				"OnCardIsBe",
+				"OnCardIsBeingDiscardedSelf\tPlayTrigger"
+			],
+			[
+				"OnB",
+				"OnBeginTurnOpponent\tPlayTrigger"
+			],
+			[
+				"Card",
+				"CardIsExecuting\tPlayEvent"
+			],
+			[
+				"DamageRu",
+				"DamageRulePayload\tDamageRulePayload"
+			],
+			[
+				"T",
+				"DamageType\tDamageType"
+			],
+			[
+				"Dam",
+				"DamageRulePayload\tDamageRulePayload"
+			],
+			[
+				"Count",
+				"Counter\tCardType"
+			],
+			[
+				"COmb",
+				"CombatPhase\tCombatPhase"
+			],
+			[
+				"Respond",
+				"RespondToGeneralEvent(CombatState state, IHasRules self, Combatant combatant, CardInstance card, PlayEvent phase)\tbool"
+			],
+			[
+				"Per",
+				"NativePersistents\tList<Persistent>"
+			],
+			[
+				"Rule",
+				"RuleIsExecuting\tPhase"
+			],
+			[
+				"CardIs",
+				"CardIsBeingDrawn\tPhase"
+			],
+			[
+				"Descr",
+				"DescribesEvent(Combatant initiator, Phase phase)\tbool"
+			],
+			[
+				"Ma",
+				"Mana\tint"
+			],
+			[
+				"Effec",
+				"effectTarget\tEffectTarget"
+			],
+			[
+				"Create",
+				"CreatePayload(CombatState state, IHasRules self)\tRulePayload"
+			],
+			[
+				"Com",
+				"CombatantTarget\tEffectTarget"
+			],
+			[
+				"Discard",
+				"DiscardRulePayload()\tDiscardRulePayload()"
+			],
+			[
+				"DiscardRu",
+				"DiscardRulePayload\tDiscardRulePayload"
+			],
+			[
+				"N",
+				"FriendlyName\tstring"
+			],
+			[
+				"RuleIs",
+				"RuleIsResponding\tCombatAction"
+			],
+			[
+				"OnCardIsEnteringP",
+				"OnCardIsEnteringPlayOpponent\tPlayTrigger"
+			],
+			[
+				"Creat",
+				"CreatePayload(CombatState state, IHasRules self)\tRulePayload"
+			],
+			[
+				"RulePay",
+				"RulePayloads\tRulePayload[]"
+			],
+			[
+				"Fr",
+				"FriendlyName\tstring { get; set; }"
+			],
+			[
+				"PlayerIn",
+				"PlayerInputType\tPlayerInputType"
+			],
+			[
+				"playPay",
+				"playPayload\tCardPlayPayload"
+			],
+			[
+				"Col",
+				"ColumnMappings\tDictionary<string, int>"
+			],
+			[
+				"_c",
+				"_combatManager\tCombatManager"
+			],
+			[
+				"_st",
+				"_state\tGameState"
+			],
+			[
+				"Setu",
+				"SetupPromotions\tMajorWorldEvent"
+			],
+			[
+				"Set",
+				"SetupPromotions\tMajorWorldEvent"
+			],
+			[
+				"ASCIISt",
+				"ASCIIStateQuestionEnterCombat\tASCIIStateQuestionEnterCombat"
+			],
+			[
+				"Cons",
+				"ConsoleModifiers\tConsoleModifiers"
+			],
+			[
+				"_state",
+				"_stateHandlers\tIStateHandler[]"
+			],
+			[
+				"Combat",
+				"CombatantDescriptor\tCombatantDescriptor"
+			],
+			[
+				"Combata",
+				"CombatantDescriptor\tCombatantDescriptor"
+			],
+			[
+				"Comb",
+				"CombatantDescriptor\tCombatantDescriptor"
+			],
+			[
+				"Get",
+				"GetMonsterAt(int x, int y)\tCombatantDescriptor"
+			],
+			[
+				"Cl",
+				"ClearQuestion()\tvoid"
+			],
+			[
+				"ASCIIState",
+				"ASCIIStateChooseClass(GameState state, Screen screen, Action<MajorWorldEvent, object> onWorldEvent, WorldLayout layout)\tASCIIStateChooseClass(GameState state, Screen screen, Action<MajorWorldEvent, object> onWorldEvent, WorldLayout layout)"
+			],
+			[
+				"ASCIIStat",
+				"ASCIIStateChooseClass\tASCIIStateChooseClass"
+			],
+			[
+				"Consolke",
+				"ConsoleKeyInfo\tConsoleKeyInfo"
+			],
+			[
+				"Clea",
+				"ClearQuestion()\tvoid"
+			],
+			[
+				"World",
+				"ASCIIStateWorld(GameState state, Screen screen, Action<MajorWorldEvent, object> onWorldEvent)\tASCIIStateWorld(GameState state, Screen screen, Action<MajorWorldEvent, object> onWorldEvent)"
+			],
+			[
+				"Quest",
+				"QuestionEnterCombat\tGamePhase"
+			],
+			[
+				"DE",
+				"Deck\tList<CardComposite>"
+			],
+			[
+				"ASC",
+				"ASCIIPresenter\tASCIIPresenter"
+			],
+			[
+				"_qu",
+				"_questionOptions\tobject[]"
+			],
+			[
+				"BigC",
+				"BigCommandPrompt\tConsoleColor"
+			],
+			[
+				"_",
+				"_layout\tWorldLayout"
+			],
+			[
+				"Pl",
+				"PlayerY\tint { get; set; }"
+			],
+			[
+				"Cur",
+				"CursorVisible\tbool { get; set; }"
+			],
+			[
+				"kW",
+				"kWorldHeight\tint"
+			],
+			[
+				"Conso",
+				"ConsoleKey\tConsoleKey"
+			],
+			[
+				"_sa",
+				"_savedFg\tConsoleColor"
+			],
+			[
+				"_save",
+				"_savedPos\tPoint"
+			],
+			[
+				"_sec",
+				"_screenBuf\tchar[,]"
+			],
+			[
+				"_bac",
+				"_backBuf\tchar[,]"
+			],
+			[
+				"_scr",
+				"_screenColorBuf\tConsoleColor[,]"
+			],
+			[
+				"Writ",
+				"Write(char value)\tvoid"
+			],
+			[
+				"Cus",
+				"CursorLeft\tint { get; set; }"
+			],
+			[
+				"Is",
+				"IsInPlay(CardInstance card)\tbool"
+			],
+			[
+				"act",
+				"StartingActions\tint"
+			],
+			[
+				"M",
+				"Mana\tint"
+			],
+			[
+				"Activatio",
+				"ActivationTime\tActivationTime"
+			],
+			[
+				"rec",
+				"recipient\tCombatant"
+			],
+			[
+				"Effe",
+				"CardEffect\tCardEffect"
+			],
+			[
+				"Comba",
+				"CombatAction\tCombatAction"
+			],
+			[
+				"Da",
+				"DamageType\tint"
+			],
+			[
+				"o",
+				"override\toverride"
+			],
+			[
+				"car",
+				"cardsToDiscard\tint"
+			],
+			[
+				"eff",
+				"effTarget(string text)\tEffectTarget"
+			],
+			[
+				"parse",
+				"parseEffectGainOrLose(string[] splits)\tCardEffect"
+			],
+			[
+				"parseEf",
+				"parseEffectDraw(string[] splits)\tCardEffect"
+			],
+			[
+				"pars",
+				"parseEffectDiscard(string[] splits)\tCardEffect"
+			],
+			[
+				"parseEff",
+				"parseEffectDamage(string[] splits)\tCardEffect"
+			],
+			[
+				"A",
+				"All\tCardType"
+			],
+			[
+				"Act",
+				"Actor\tCombatant"
+			],
+			[
+				"Cardn",
+				"CardInstance\tCardInstance"
+			],
+			[
+				"Gr",
+				"Green\tConsoleColor"
+			],
+			[
+				"H",
+				"Health\tint"
+			],
+			[
+				"Con",
+				"Console\tConsole"
+			],
+			[
+				"Rep",
+				"Replace(string oldValue, string newValue)\tstring"
+			],
+			[
+				"Ef",
+				"EffectType\tEffectType"
+			],
+			[
+				"Consol",
+				"ConsoleColor\tConsoleColor"
+			],
+			[
+				"Eff",
+				"EffectTarget\tEffectTarget"
+			],
+			[
+				"Car",
+				"CardType\tCardType"
+			],
+			[
+				"Sub",
+				"Substring(int startIndex, int length)\tstring"
+			],
+			[
+				"Play",
+				"PlayCard(Combatant current, CardInstance card)\tvoid"
+			],
+			[
+				"Damagy",
+				"DamagePayload(DamageType type, int amount)\tDamagePayload(DamageType type, int amount)"
+			],
+			[
+				"Ty",
+				"CardType\tCardType"
+			],
+			[
+				"refl",
+				"reflectedDamageType\tDamageType"
+			],
+			[
+				"Exec",
+				"ExecTakeDamage(DamageType type, int dmg, Combatant src, Combatant target)\tint"
+			],
+			[
+				"Le",
+				"LoseHealth\tCombatAction"
+			],
+			[
+				"Adju",
+				"AdjustHealth(int amount)\tint"
+			],
+			[
+				"Disc",
+				"DiscardCard(Combatant current, CardInstance card)\tvoid"
+			],
+			[
+				"REmove",
+				"Remove(T item)\tbool"
+			],
+			[
+				"Ha",
+				"Hand\tList<CardInstance>"
+			],
+			[
+				"comb",
+				"CombatAction\tCombatAction"
+			],
+			[
+				"Han",
+				"HandSize\tint"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "import React, { Component } from 'react'\nimport { Card } from 'semantic-ui-react'\nimport { Link } from 'react-static'\n\nexport default class PostCard extends Component {\n  render() {\n    const { href, image, header, description } = this.props;\n    return (\n      <Link to={ href }>\n        <Card\n          fluid\n          image={ image }\n          link\n          header={ header }\n          description={ description }\n        >\n        </Card>\n      </Link>\n    )\n  }\n}",
+			"file": "src/containers/PostCard.js",
+			"file_size": 508,
+			"file_write_time": 131589564930000000,
+			"settings":
+			{
+				"buffer_size": 469,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/posts/allPosts.js",
+			"settings":
+			{
+				"buffer_size": 812,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/containers/Page.js",
+			"settings":
+			{
+				"buffer_size": 584,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/containers/Home.js",
+			"settings":
+			{
+				"buffer_size": 460,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/containers/PostCardFlow.js",
+			"settings":
+			{
+				"buffer_size": 2674,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/posts/2016-11-26-gengam-2016.json",
+			"settings":
+			{
+				"buffer_size": 303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static.config.js",
+			"settings":
+			{
+				"buffer_size": 2506,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/posts/2014-06-20-roblox.json",
+			"settings":
+			{
+				"buffer_size": 281,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"PackageResourceViewer",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"boo",
+				"SublimeBookmarks: Remove All Bookmarks (Clear Bookmarks)"
+			],
+			[
+				"bookmark",
+				"SublimeBookmarks: Remove All Bookmarks (Clear Bookmarks)"
+			],
+			[
+				"next",
+				"SublimeBookmarks: Goto Next Bookmark"
+			],
+			[
+				"add book",
+				"SublimeBookmarks: Add Bookmark"
+			],
+			[
+				"goto",
+				"SublimeBookmarks: Goto Previous Bookmark"
+			],
+			[
+				"sublime",
+				"SublimeBookmarks: Add Bookmark"
+			],
+			[
+				"package control:inst",
+				"Package Control: Install Package"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"PackageResourceViewer:Open Resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 476.0
+	},
+	"console":
+	{
+		"height": 927.0,
+		"history":
+		[
+			"print os.__dict__",
+			"print os",
+			"os.pwd()",
+			"import os",
+			"os.pwd()",
+			"os.clear()",
+			"clear",
+			"git status;",
+			"git status",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/daveman/Internal/Webdev/davideyork.com-react",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/public",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/public/content",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/public/css",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/pages"
+	],
+	"file_history":
+	[
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Home.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/allPosts.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/FollowLink.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/BigBanner.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2014-06-20-roblox.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Post.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-22-lode-runner-3d.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-25-voxel-heightmap.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-27-hack-and-quest.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/pages/about.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Page.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-28-mindless-dungeon-crawl.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-26-morty-the-mole.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-24-roguelike-in-unity.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-23-kumax.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Banner.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2014-08-23-patterns.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2016-11-26-gengam-2016.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2016-03-13-7drl-dont-go-out-the-airlock.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2016-03-01-procedural-generation-decorator.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2015-10-22-L-system-fractals-with-unity.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2015-02-08-drunken-walk.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2014-08-23-blocksworld.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Footer.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/App.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2015-10-22-L-system-fractals-with-unity.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/dist/css/davideyork.css",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/public/css/davideyork.css",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2016-03-13-7drl-dont-go-out-the-airlock.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2015-02-08-drunken-walk.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/TagList.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-22-lode-runner-3d.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-24-roguelike-in-unity.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-25-voxel-heightmap.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-26-morty-the-mole.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-27-hack-and-quest.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2013-02-28-mindless-dungeon-crawl.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2014-06-20-roblox.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2014-08-23-patterns.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2014-08-23-blocksworld.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/TopNav.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Blog.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/pages/about.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/404.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/index.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/2016-03-01-procedural-generation-decorator.md",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/About.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/ShareList.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/static.config.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/FollowIcon.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/node_modules/tar/lib/header.js",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/package.json",
+		"/Users/daveman/Internal/Webdev/davideyork.com-react/public/css/semantic.min.css",
+		"/Users/daveman/Internal/Scratch/WebDev/react-static/styled-components/package.json",
+		"/Users/daveman/Internal/Scratch/WebDev/react-static/styled-components/src/containers/TestMD.js",
+		"/Users/daveman/Internal/Scratch/WebDev/react-static/glamerous/node_modules/bowser/.idea/markdown-exported-files.xml",
+		"/Users/daveman/Internal/Scratch/WebDev/xmas-2017/my-app/.gitignore",
+		"/Users/daveman/Internal/Scratch/WebDev/React/my-app/src/App.js",
+		"/Users/daveman/Internal/Scratch/WebDev/React/my-app/public/assets/css/bootstrap-reboot.css",
+		"/Users/daveman/Internal/Scratch/WebDev/React/my-app/public/index.html",
+		"/Users/daveman/Internal/Scratch/WebDev/React/get-started.sh",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/GameCore/GameState.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Persistence/MonsterInfo.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Types/Actor.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/DrowASCII/Code/ASCIIStateWorld.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/HelpersExtensionsData/CombatStateExtensions.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Combat/Combatant.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Types/CardUpgradeSlots.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Combat/CombatState.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/DrowASCII/Code/ASCIICheateyMcCheatface.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Types/MinorFeatures.cs",
+		"/Users/daveman/Internal/Projects/drow/drow-game/Assets/Scripts/Combat/CardInstance.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/CombatStateExtensions.Broadcast.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Persistence/BackstoryInfo.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/PlayerBuilder.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Persistence/ProfessionInfo.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/Actor.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/ObsoleteRules.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CombatRecorder.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/CombatStateExtensions.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CardInstance.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/Rules.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/Persistent.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/Enums.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CardStates.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/RulePayloads.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/Extensions.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/Persistent_old.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/GameCore/CombatManager.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/ASCIIGame.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/ASCIIStateChooseClass.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/ObsoletePersistents.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII.csproj",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/DamagePayload.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/ASCIIPresenter.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Persistence/CardParser.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/MinorFeatures.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/CardUpgradeSlots.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/.gitignore",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/GameCore/GameData.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Persistence/MonsterCombatantInfo.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/CombatantExtensions.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/Combatant.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Persistence/CardInfo.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Persistence/CardDB.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CardPlayPayload.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/Interfaces.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/CastingCost.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/Interfaces.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/CombatStateExtensions.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/DrowASCIIProgram.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/PlayEvent.cs",
+		"/c/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/Extensions.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CombatState.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/TestCombat.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/GameCore/PlayerInput.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/CombatStateRefactor.cs",
+		"/c/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Types/PlayEvent.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/ASCIIStateCombat.cs",
+		"/c/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/Screen.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Resources/Monster.csv",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/Screen.cs",
+		"/c/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/HelpersExtensionsData/CombatantExtensions.cs",
+		"/c/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CardPlayPayload.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/PCG/RegionInfo.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/RawTerminal.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/PCG/TestRegionGenerator.cs",
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/GameCore/GameState.cs"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 154.0,
+		"where_history":
+		[
+			"*.js",
+			"*.wd",
+			"*.jss",
+			"*.js",
+			"*.css",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"14",
+			"meta",
+			"metadata",
+			"tags/indie",
+			"visit",
+			"posts",
+			"allPosts",
+			"    ",
+			"BlogCard",
+			"dey",
+			"&amp;",
+			"'",
+			"\n<",
+			"600px",
+			"',\n",
+			"400px",
+			"![David York]",
+			"active",
+			"onClick={this.handleItemClick} ",
+			"Container content",
+			"backend",
+			"backeng",
+			"visible",
+			"showFace",
+			"content",
+			"div",
+			"TODO",
+			"props",
+			"=",
+			"Icon",
+			"div",
+			"props",
+			"React",
+			"props",
+			"large",
+			"margin",
+			"div>",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"home-cover-main",
+			"class",
+			"  name",
+			"InvertedMenu",
+			"webpack",
+			"siteRoot",
+			"siteroot",
+			"</i>",
+			"<i",
+			"class"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/containers/PostCard.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								277,
+								277
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/posts/allPosts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 812,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								105,
+								121
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/containers/Page.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 584,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								187,
+								220
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/containers/Home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 460,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								414,
+								419
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/containers/PostCardFlow.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1601,
+								1601
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 475.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/containers/PostCard.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 469,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/posts/2016-11-26-gengam-2016.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "static.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2506,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JSX/JSX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 760.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/posts/2014-06-20-roblox.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 128.0
+	},
+	"output.variable_get":
+	{
+		"height": 29.0
+	},
+	"pinned_build_system": "",
+	"project": "davideyork.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"2016",
+				"src/posts/2016-11-26-gengam-2016.json"
+			],
+			[
+				"home.js",
+				"src/containers/Home.js"
+			],
+			[
+				"postcard",
+				"src/containers/PostCard.js"
+			],
+			[
+				"bigban",
+				"src/containers/BigBanner.js"
+			],
+			[
+				"allpost",
+				"src/posts/allPosts.js"
+			],
+			[
+				"page.js",
+				"src/containers/Page.js"
+			],
+			[
+				"roblox.",
+				"src/posts/2014-06-20-roblox.json"
+			],
+			[
+				"static",
+				"static.config.js"
+			],
+			[
+				"folowli",
+				"src/containers/FollowLink.js"
+			],
+			[
+				"post.js",
+				"src/containers/Post.js"
+			],
+			[
+				"allpo",
+				"src/posts/allPosts.js"
+			],
+			[
+				"page",
+				"src/containers/Page.js"
+			],
+			[
+				"about.json",
+				"src/pages/about.json"
+			],
+			[
+				"hack",
+				"src/posts/2013-02-27-hack-and-quest.json"
+			],
+			[
+				"voxels",
+				"src/posts/2013-02-25-voxel-heightmap.json"
+			],
+			[
+				"loderunn",
+				"src/posts/2013-02-22-lode-runner-3d.json"
+			],
+			[
+				"banner.js",
+				"src/containers/Banner.js"
+			],
+			[
+				"footer.js",
+				"src/containers/Footer.js"
+			],
+			[
+				"davidey",
+				"dist/css/davideyork.css"
+			],
+			[
+				"davide",
+				"dist/css/davideyork.css"
+			],
+			[
+				"app.js",
+				"src/App.js"
+			],
+			[
+				"taglist",
+				"src/containers/TagList.js"
+			],
+			[
+				"appjs",
+				"src/App.js"
+			],
+			[
+				"about.md",
+				"src/pages/about.md"
+			],
+			[
+				"about.js",
+				"src/containers/About.js"
+			],
+			[
+				"topnav",
+				"src/containers/TopNav.js"
+			],
+			[
+				"airlock",
+				"src/posts/2016-03-13-7drl-dont-go-out-the-airlock.json"
+			],
+			[
+				"gengam",
+				"src/posts/2016-11-26-gengam-2016.json"
+			],
+			[
+				"procedu",
+				"src/posts/2016-03-01-procedural-generation-decorator.md"
+			],
+			[
+				"",
+				"src/posts/2016-03-13-7drl-dont-go-out-the-airlock.json"
+			],
+			[
+				"airloc",
+				"src/posts/2016-03-13-7drl-dont-go-out-the-airlock.json"
+			],
+			[
+				"index.js",
+				"src/index.js"
+			],
+			[
+				"404",
+				"src/containers/404.js"
+			],
+			[
+				"blocksworld.md",
+				"src/posts/2014-08-23-blocksworld.md"
+			],
+			[
+				"blocks",
+				"src/posts/2014-08-23-blocksworld.md"
+			],
+			[
+				"post",
+				"src/containers/Post.js"
+			],
+			[
+				"footer",
+				"src/containers/Footer.js"
+			],
+			[
+				"follow",
+				"src/containers/FollowIcon.js"
+			],
+			[
+				"followicon",
+				"src/containers/FollowIcon.js"
+			],
+			[
+				"followlink",
+				"src/containers/FollowLink.js"
+			],
+			[
+				"header.js",
+				"node_modules/tar/lib/header.js"
+			],
+			[
+				"postjs",
+				"src/containers/Post.js"
+			],
+			[
+				"packages",
+				"package.json"
+			],
+			[
+				"blocksworld",
+				"src/posts/2014-08-23-blocksworld.md"
+			],
+			[
+				"package",
+				"styled-components/package.json"
+			],
+			[
+				"testmd.",
+				"styled-components/src/containers/TestMD.js"
+			],
+			[
+				"markdown",
+				"glamerous/node_modules/bowser/.idea/markdown-exported-files.xml"
+			],
+			[
+				"reboot.css",
+				"my-app/public/assets/css/bootstrap-reboot.css"
+			],
+			[
+				"reboot",
+				"my-app/public/assets/css/bootstrap-reboot.css"
+			],
+			[
+				".html",
+				"my-app/public/index.html"
+			],
+			[
+				"app.",
+				"my-app/src/App.js"
+			],
+			[
+				"rotation",
+				"Assets/CardUI/Scripts/PersistentRotationTween.cs"
+			],
+			[
+				"cardinst",
+				"Assets\\Scripts\\Combat\\CardInstance.cs"
+			],
+			[
+				"cardupgr",
+				"Assets\\Scripts\\Types\\CardUpgradeSlots.cs"
+			],
+			[
+				"combatstateex",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateExtensions.cs"
+			],
+			[
+				"gamestate",
+				"Assets\\Scripts\\GameCore\\GameState.cs"
+			],
+			[
+				"combatant.cs",
+				"Assets\\Scripts\\Combat\\Combatant.cs"
+			],
+			[
+				"combatstate.cs",
+				"Assets\\Scripts\\Combat\\CombatState.cs"
+			],
+			[
+				"combatstate",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateExtensions.cs"
+			],
+			[
+				"combatstateext",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateExtensions.Broadcast.cs"
+			],
+			[
+				"combatant",
+				"Assets\\Scripts\\Combat\\Combatant.cs"
+			],
+			[
+				"actor.cs",
+				"Assets\\Scripts\\Types\\Actor.cs"
+			],
+			[
+				"face",
+				"DrowASCII\\Code\\ASCIICheateyMcCheatface.cs"
+			],
+			[
+				"monsterinfo",
+				"Assets\\Scripts\\Persistence\\MonsterInfo.cs"
+			],
+			[
+				"min",
+				"Assets\\Scripts\\Types\\MinorFeatures.cs"
+			],
+			[
+				"backstory",
+				"Assets\\Scripts\\Persistence\\BackstoryInfo.cs"
+			],
+			[
+				"profess",
+				"Assets\\Scripts\\Persistence\\ProfessionInfo.cs"
+			],
+			[
+				"player",
+				"Assets\\Scripts\\HelpersExtensionsData\\PlayerBuilder.cs"
+			],
+			[
+				"state",
+				"Assets\\Scripts\\Combat\\CardStates.cs"
+			],
+			[
+				"obso",
+				"Assets\\Scripts\\Combat\\ObsoleteRules.cs"
+			],
+			[
+				"rules",
+				"Assets\\Scripts\\Combat\\ObsoleteRules.cs"
+			],
+			[
+				"persist",
+				"Assets\\Scripts\\Combat\\Persistent.cs"
+			],
+			[
+				"pay",
+				"Assets\\Scripts\\Combat\\RulePayloads.cs"
+			],
+			[
+				"rules.cs",
+				"Assets\\Scripts\\Combat\\Rules.cs"
+			],
+			[
+				"enum",
+				"Assets\\Scripts\\Types\\Enums.cs"
+			],
+			[
+				"combatstat",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateExtensions.cs"
+			],
+			[
+				"ascii",
+				"DrowASCII\\Code\\ASCIIGame.cs"
+			],
+			[
+				".csjo",
+				"DrowASCII.csproj"
+			],
+			[
+				"damage",
+				"Assets\\Scripts\\Types\\DamagePayload.cs"
+			],
+			[
+				"rulepay",
+				"Assets\\Scripts\\Combat\\RulePayloads.cs"
+			],
+			[
+				"combatmanager.cs",
+				"Assets\\Scripts\\GameCore\\CombatManager.cs"
+			],
+			[
+				"payloads",
+				"Assets\\Scripts\\Combat\\RulePayloads.cs"
+			],
+			[
+				"rulepayloa",
+				"Assets\\Scripts\\Combat\\RulePayloads.cs"
+			],
+			[
+				"obsolete",
+				"Assets\\Scripts\\Combat\\ObsoleteRules.cs"
+			],
+			[
+				"rule.cs",
+				"Assets\\Scripts\\Combat\\Rules.cs"
+			],
+			[
+				"pers",
+				"Assets\\Scripts\\Combat\\Persistent.cs"
+			],
+			[
+				"combatrec",
+				"Assets\\Scripts\\Combat\\CombatRecorder.cs"
+			],
+			[
+				"cardparser",
+				"Assets\\Scripts\\Persistence\\CardParser.cs"
+			],
+			[
+				"enum.cs",
+				"Assets\\Scripts\\Types\\Enums.cs"
+			],
+			[
+				"cardpars",
+				"Assets\\Scripts\\Persistence\\CardParser.cs"
+			],
+			[
+				"enum.",
+				"Assets\\Scripts\\Types\\Enums.cs"
+			],
+			[
+				"rule.",
+				"Assets\\Scripts\\Combat\\Rules.cs"
+			],
+			[
+				"rule",
+				"Assets\\Scripts\\Combat\\RulePayloads.cs"
+			],
+			[
+				"per",
+				"Assets\\Scripts\\Combat\\Persistent.cs"
+			],
+			[
+				"minorfea",
+				"Assets\\Scripts\\Types\\MinorFeatures.cs"
+			],
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"cardpr",
+				"Assets\\Scripts\\Types\\CardUpgradeSlots.cs"
+			],
+			[
+				"asciiprees",
+				"DrowASCII\\Code\\ASCIIPresenter.cs"
+			],
+			[
+				"cardupgrad",
+				"Assets\\Scripts\\Types\\CardUpgradeSlots.cs"
+			],
+			[
+				".csproj",
+				"DrowASCII.csproj"
+			],
+			[
+				"cost",
+				"Assets\\Scripts\\Types\\CastingCost.cs"
+			],
+			[
+				"interafces",
+				"Assets\\Scripts\\Combat\\Interfaces.cs"
+			],
+			[
+				"interfac",
+				"DrowASCII\\Code\\Interfaces.cs"
+			],
+			[
+				"broadca",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateExtensions.Broadcast.cs"
+			],
+			[
+				"cardplay",
+				"Assets\\Scripts\\Combat\\CardPlayPayload.cs"
+			],
+			[
+				"cardin",
+				"Assets\\Scripts\\Combat\\CardInstance.cs"
+			],
+			[
+				"persistent",
+				"Assets\\Scripts\\Combat\\Persistent.cs"
+			],
+			[
+				"inter",
+				"Assets\\Scripts\\Combat\\Interfaces.cs"
+			],
+			[
+				"enums.cs",
+				"Assets\\Scripts\\Types\\Enums.cs"
+			],
+			[
+				"combatstatee",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateExtensions.cs"
+			],
+			[
+				".gitig",
+				".gitignore"
+			],
+			[
+				"csproj",
+				"DrowASCII.csproj"
+			],
+			[
+				"playevent",
+				"Assets\\Scripts\\Types\\PlayEvent.cs"
+			],
+			[
+				"enums",
+				"Assets\\Scripts\\Types\\Enums.cs"
+			],
+			[
+				"combatrecord",
+				"Assets\\Scripts\\Combat\\CombatRecorder.cs"
+			],
+			[
+				"recorder",
+				"Assets\\Scripts\\Combat\\CombatRecorder.cs"
+			],
+			[
+				"playpay",
+				"Assets\\Scripts\\Combat\\CardPlayPayload.cs"
+			],
+			[
+				"payload",
+				"Assets\\Scripts\\Combat\\RulePayloads.cs"
+			],
+			[
+				"ru",
+				"Assets\\Scripts\\Combat\\Rules.cs"
+			],
+			[
+				"persis",
+				"Assets\\Scripts\\Combat\\Persistent.cs"
+			],
+			[
+				"refact",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateRefactor.cs"
+			],
+			[
+				"combatmana",
+				"Assets\\Scripts\\GameCore\\CombatManager.cs"
+			],
+			[
+				"cardins",
+				"Assets\\Scripts\\Combat\\CardInstance.cs"
+			],
+			[
+				"cardinstance",
+				"Assets\\Scripts\\Combat\\CardInstance.cs"
+			],
+			[
+				"interface",
+				"Assets\\Scripts\\Combat\\Interfaces.cs"
+			],
+			[
+				"combatstateref",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateRefactor.cs"
+			],
+			[
+				"persisnt",
+				"Assets\\Scripts\\Combat\\Persistent.cs"
+			],
+			[
+				"refactor",
+				"Assets\\Scripts\\HelpersExtensionsData\\CombatStateRefactor.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 659.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 249.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
