@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 import { Card } from 'semantic-ui-react'
 import styled from 'styled-components'
+import { Link } from 'react-static'
 
 export default class PostCard extends Component {
   render() {
-    const metadata = this.props.metadata;
+    const { href, image, header, description } = this.props;
     return (
-      <Card
-        image={ metadata.cardImage }
-        header={ metadata.title }
-        description={ metadata.oneLiner }
-      />
+      <Link to={ href }>
+        <Card
+          image={ image }
+          link
+          header={ header }
+          description={ description }
+        >
+        </Card>
+      </Link>
     )
   }
 }
