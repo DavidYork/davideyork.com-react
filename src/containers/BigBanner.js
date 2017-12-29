@@ -82,8 +82,6 @@ export default class BigBanner extends Component {
       backgroundImage: 'url(' + this.props.image + ')',
     }
 
-    console.log(this.props.hideFace);
-
     return (
       <BannerStyles>
         <div className="cover-image" style={ coverImageStyle } >

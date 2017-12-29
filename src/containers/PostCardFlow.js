@@ -14,6 +14,7 @@ const PostCardFlowStyles = styled.div`
 `
 
 export default class PostCardFlow extends Component {
+  static numColumns = 3;
 
   getCard(post) {
     return (
@@ -31,21 +32,23 @@ export default class PostCardFlow extends Component {
 
   getRow(posts) {
     return (
-      <Grid stackable columns={ 3 }>
+      <Grid stackable columns={ PostCardFlow.numColumns } key={ 'col-' + posts[0].route }>
         { posts.map( (post) => this.getCard(post) ) }
       </Grid>
     );
   }
 
   render() {
+    const posts = this.props.posts;
+    var postSets = [];
+    for (var i = 0; i < posts.length; i+=PostCardFlow.numColumns) {
+      postSets.push(posts.slice(i, i+3));
+    }
+
     return (
       <PostCardFlowStyles>
         <div className='flow-content'>
-          { this.getRow(this.props.posts.slice(10, 13).reverse()) }
-          { this.getRow(this.props.posts.slice(9, 12).reverse()) }
-          { this.getRow(this.props.posts.slice(6, 9).reverse()) }
-          { this.getRow(this.props.posts.slice(3, 6).reverse()) }
-          { this.getRow(this.props.posts.slice(0, 1).reverse()) }
+          { postSets.map(x => this.getRow(x)) }
         </div>
       </PostCardFlowStyles>
     )
