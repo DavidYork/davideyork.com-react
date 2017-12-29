@@ -28,8 +28,6 @@ export default class PostCard extends Component {
                   className='button-styling'
                   color='grey'
                   fluid
-                  as={ Link }
-                  to={ href }
                 >Read article</Button>
             </Card.Content>
           </Card>
