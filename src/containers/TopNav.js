@@ -28,8 +28,7 @@ export default class TopNav extends Component {
             <Menu.Item as={ Link } to='/tags/procedural-generation' name='procedural generation' />
             <Menu.Item as={ Link } to='/tags/work' name='work' />
             <Menu.Item as={ Link } to='/tags/gamedev' name='gamedev' />
-            <Menu.Item as={ Link } to='/about' name='about' />
-            <Menu.Item as={ Link } to='/test-blog' name='test' />
+            <Menu.Item as={ Link } to='/about' name='about'>Who am I?</Menu.Item>
 
             <Menu.Menu position='right'>
               <FollowIcon to='http://twitter.com/DavemanInSF' name='twitter' />

@@ -61,9 +61,17 @@ export default class BigBanner extends Component {
 
   getFace = (hide) => {
     if (hide) {
-      return (<Image className='my-face invisible' size='tiny' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
+      return (
+        <Link to="/about">
+          <Image className='my-face invisible' size='tiny' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />
+        </Link>
+      );
     } else {
-      return (<Image className='my-face' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />);
+      return (
+        <Link to="/about">
+          <Image className='my-face' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />
+        </Link>
+      );
     }
   }
 
