@@ -20,8 +20,15 @@ const TagListStyles = styled.div`
 
 export default function (props) {
 
+  function sanitize(tag) {
+    while (tag.indexOf(' ') >= 0) {
+      tag = tag.replace(' ', '-');
+    }
+    return tag.toLowerCase();
+  }
+
   function getTag(tag, append) {
-    const target = '/tags/' + tag.toLowerCase().replace(' ', '-') + '/'
+    const target = '/tags/' + sanitize(tag) + '/'
     return (
       <Link to={ target } key={ tag } >{ tag }{ append }</Link>
     )

@@ -24,7 +24,7 @@ export default class TopNav extends Component {
         <nav>
           <Menu stackable inverted fixed='top' >
             <Menu.Item as={ Link } to='/' name='home' />
-            <Menu.Item as={ Link } to='/tags/indie' name='indie'>Indie Gamedev</Menu.Item>
+            <Menu.Item as={ Link } to='/tags/independent-game-development' name='indie'>Indie Gamedev</Menu.Item>
             <Menu.Item as={ Link } to='/tags/procedural-generation' name='procedural generation' />
             <Menu.Item as={ Link } to='/tags/work' name='work' />
             <Menu.Item as={ Link } to='/about' name='about'>Who am I?</Menu.Item>
