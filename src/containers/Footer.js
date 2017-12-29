@@ -9,7 +9,7 @@ const FooterStyles = styled.div`
     margin-top: 100px;
   }
   .footer {
-    color: #666;
+    color: #AAA;
     background-color: #000;
     font-family: 'Proxima Nova','Helvetica Neue',Helvetica,sans-serif;
     font-size: 15px;
@@ -34,7 +34,7 @@ const FooterStyles = styled.div`
     line-height: 2em;
   }
   a {
-    color: #666;
+    color: #AAA;
   }
   a:hover {
     color: #4183c4; // TODO: Get from semantic-ui-react

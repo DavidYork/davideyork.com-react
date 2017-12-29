@@ -31,7 +31,7 @@ export default class PostCardFlow extends Component {
 
   getRow(posts) {
     return (
-      <Grid stackable columns={ posts.length }>
+      <Grid stackable columns={ 3 }>
         { posts.map( (post) => this.getCard(post) ) }
       </Grid>
     );
@@ -41,11 +41,11 @@ export default class PostCardFlow extends Component {
     return (
       <PostCardFlowStyles>
         <div className='flow-content'>
-          { this.getRow(this.props.posts.slice(12, 15).reverse()) }
+          { this.getRow(this.props.posts.slice(10, 13).reverse()) }
           { this.getRow(this.props.posts.slice(9, 12).reverse()) }
           { this.getRow(this.props.posts.slice(6, 9).reverse()) }
           { this.getRow(this.props.posts.slice(3, 6).reverse()) }
-          { this.getRow(this.props.posts.slice(0, 3).reverse()) }
+          { this.getRow(this.props.posts.slice(0, 1).reverse()) }
         </div>
       </PostCardFlowStyles>
     )

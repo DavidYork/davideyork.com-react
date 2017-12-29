@@ -3,8 +3,8 @@
 export default {
   posts: [
     // 'test',
-    '2013-02-22-lode-runner-3d',
-    '2013-02-23-kumax',
+    // '2013-02-22-lode-runner-3d',
+    // '2013-02-23-kumax',
     '2013-02-24-roguelike-in-unity',
     '2013-02-25-voxel-heightmap',
     '2013-02-26-morty-the-mole',

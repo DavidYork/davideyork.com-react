@@ -60,33 +60,29 @@ export default class BigBanner extends Component {
   };
 
   getFace = (hide) => {
-    if (hide) {
-      return (
-        <Link to="/about">
-          <Image className='my-face invisible' size='tiny' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />
-        </Link>
-      );
-    } else {
-      return (
-        <Link to="/about">
-          <Image className='my-face' size='small' circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />
-        </Link>
-      );
-    }
+    const className = (hide) ? 'my-face invisible' : 'my-face';
+    const size = (hide) ? 'tiny' : 'small';
+    return (
+      <Link to="/about">
+        <Image className={ className } size={ size } circular centered src="http://www.gravatar.com/avatar/a746e76a4d3ec064b817b41b8d29d889?s=250&amp;d=mm&amp;r=x" />
+      </Link>
+    );
   }
 
   getLink = (link, linkText) => {
-    if (link) {
-      return (<Button as={ Link } className='banner-button' to={ link } >{ linkText }</Button>);
-    } else {
-      return ;
-    }
+    return(
+      <Link to={ link }>
+        <Button className='banner-button'>{ linkText }</Button>
+      </Link>
+    )
   }
 
   render() {
     const coverImageStyle = {
       backgroundImage: 'url(' + this.props.image + ')',
     }
+
+    console.log(this.props.hideFace);
 
     return (
       <BannerStyles>
@@ -96,7 +92,11 @@ export default class BigBanner extends Component {
             <div className="banner">
               <div className="banner-title">{ this.props.title }</div>
               <div className="banner-description">{ this.props.description }</div>
-              { this.getLink( this.props.link, this.props.linkText ) }
+              {
+                (this.props.link)
+                  ? this.getLink(this.props.link, this.props.linkText)
+                  : ''
+              }
             </div>
           </div>
         </div>

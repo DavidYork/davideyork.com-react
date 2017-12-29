@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-static'
-import { Menu, Segment } from 'semantic-ui-react'
+import { Menu, Segment, Dropdown } from 'semantic-ui-react'
 import FollowIcon from './FollowIcon'
 
 const TopNavStyles = styled.div`
@@ -9,7 +9,7 @@ const TopNavStyles = styled.div`
     padding-right: 20px;
     padding-top: 4px;
     line-height: 2em;
-    color: #444
+    color: #AAA
   }
 `
 
@@ -22,12 +22,11 @@ export default class TopNav extends Component {
     return (
       <TopNavStyles>
         <nav>
-          <Menu stackable fixed='top' >
+          <Menu stackable inverted fixed='top' >
             <Menu.Item as={ Link } to='/' name='home' />
-            <Menu.Item as={ Link } to='/tags/indie' name='indie' />
+            <Menu.Item as={ Link } to='/tags/indie' name='indie'>Indie Gamedev</Menu.Item>
             <Menu.Item as={ Link } to='/tags/procedural-generation' name='procedural generation' />
             <Menu.Item as={ Link } to='/tags/work' name='work' />
-            <Menu.Item as={ Link } to='/tags/gamedev' name='gamedev' />
             <Menu.Item as={ Link } to='/about' name='about'>Who am I?</Menu.Item>
 
             <Menu.Menu position='right'>
