@@ -2,7 +2,7 @@ import fs from 'fs'
 import axios from 'axios'
 import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
-import allPosts from './src/posts/allPosts'
+import allPosts from './src/allPosts'
 
 const marked = require('marked')
 
@@ -84,9 +84,9 @@ export default {
             <title>David York</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css" />
             <link rel="stylesheet" href="/css/davideyork.css" />
-            {renderMeta.styleTags}
+            { renderMeta.styleTags }
           </Head>
-          <Body>{children}</Body>
+          <Body>{ children }</Body>
         </Html>
       )
     }

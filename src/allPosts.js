@@ -21,9 +21,5 @@ export default {
     '2013-02-24-roguelike-in-unity',
     '2013-02-23-kumax',
     '2013-02-22-lode-runner-3d',
-  ],
-
-  getMetadata( postname ) {
-    return { foo : "bar" }
-  }
+  ]
 }
