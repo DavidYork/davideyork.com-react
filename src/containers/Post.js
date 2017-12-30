@@ -25,11 +25,11 @@ export default getRouteProps(( props ) => {
           <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
           <TagList tags={ props.metadata.tags } />
           <ShareList />
+          <NextPrev
+            prev={ props.prev }
+            next={ props.next }
+          />
         </div>
-        <NextPrev
-          prev={ props.prev }
-          next={ props.next }
-        />
       </Container>
     </PostStyles>
   )

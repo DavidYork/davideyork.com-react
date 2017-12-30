@@ -51,6 +51,28 @@ export default {
       return null;
     };
 
+    var getSiblings = (post) => {
+      var idx = 0;
+      var found = false;
+      for (var i = 0; i < siteMetadata.posts.length && !found; i++) {
+        if (post == siteMetadata.posts[i]) {
+          idx = i;
+          found = true;
+        }
+      }
+
+      var prevIdx = (idx - 1 < 0) ? siteMetadata.posts.length - 1 : idx - 1;
+      var nextIdx = (idx + 1 >= siteMetadata.posts.length) ? 0 : idx + 1;
+      var metaData = getAllPostMetadata();
+
+      var rv = {
+        prev: metaData[prevIdx],
+        next: metaData[nextIdx]
+      };
+
+      return rv;
+    };
+
     var getPostsFromTag = (tag) => {
       var rv = [];
       var meta = getAllPostMetadata();
@@ -66,6 +88,7 @@ export default {
     // These are top-level, not children of "domain.com/blog/..."
     var postRoutes = siteMetadata.posts.map( x => {
       const meta = JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8'));
+      const siblings = getSiblings(x);
       return {
         path: meta.route,
         component: 'src/containers/Post',
@@ -73,8 +96,8 @@ export default {
           return {
             markdown: marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
             metadata: meta,
-            next: meta,
-            prev: meta,
+            next: siblings.prev,
+            prev: siblings.next,
           }
         }
       }
