@@ -14,7 +14,9 @@ const PostStyles = styled.div`
   }
 `
 
-export default getRouteProps(( props ) => (
+export default getRouteProps(( props ) => {
+  console.log(props);
+  return (
   <PostStyles>
     <Banner image={ props.metadata.image }/>
     <Container >
@@ -26,4 +28,4 @@ export default getRouteProps(( props ) => (
       </div>
     </Container>
   </PostStyles>
-))
+)})
