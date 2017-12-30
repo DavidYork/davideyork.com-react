@@ -73,6 +73,8 @@ export default {
           return {
             markdown: marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
             metadata: meta,
+            next: meta,
+            prev: meta,
           }
         }
       }

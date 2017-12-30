@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Banner from './Banner'
 import TagList from './TagList'
 import ShareList from './ShareList'
+import NextPrev from './NextPrev'
 
 const PostStyles = styled.div`
   .img-group {
@@ -15,17 +16,21 @@ const PostStyles = styled.div`
 `
 
 export default getRouteProps(( props ) => {
-  console.log(props);
   return (
-  <PostStyles>
-    <Banner image={ props.metadata.image }/>
-    <Container >
-      <div className='content'>
-        <h1>{ props.metadata.title }</h1>
-        <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
-        <TagList tags={ props.metadata.tags } />
-        <ShareList />
-      </div>
-    </Container>
-  </PostStyles>
-)})
+    <PostStyles>
+      <Banner image={ props.metadata.image }/>
+      <Container >
+        <div className='content'>
+          <h1>{ props.metadata.title }</h1>
+          <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
+          <TagList tags={ props.metadata.tags } />
+          <ShareList />
+        </div>
+        <NextPrev
+          prev={ props.prev }
+          next={ props.next }
+        />
+      </Container>
+    </PostStyles>
+  )
+})
