@@ -15,6 +15,7 @@ const TagListStyles = styled.div`
   }
   .taglist {
     margin-top: 20px;
+    text-align: center;
   }
 `
 
@@ -30,7 +31,7 @@ export default function (props) {
   function getTag(tag, append) {
     const target = '/tags/' + sanitize(tag) + '/'
     return (
-      <Link to={ target } key={ tag } >{ tag }{ append }</Link>
+      <Link key={ target } to={ target } key={ tag } >{ tag }{ append }</Link>
     )
   }
 

@@ -1,18 +1,11 @@
 import React from 'react'
 import { getRouteProps } from 'react-static'
-import styled from 'styled-components'
 import BigBanner from './BigBanner'
 import PostCardFlow from './PostCardFlow'
 
-const TagFlowStyles = styled.div`
-`
-
-// export default class TagFlow extends Component {
 export default getRouteProps(( props ) => {
-  // render(props) {
-    console.log(props);
     return (
-      <TagFlowStyles>
+      <div>
         <BigBanner
           title={ props.tag.title }
           description={ props.tag.description }
@@ -21,7 +14,7 @@ export default getRouteProps(( props ) => {
         <div className='massive-container'>
           <PostCardFlow posts={ props.posts }/>
         </div>
-      </TagFlowStyles>
+      </div>
     )
   }
 )
