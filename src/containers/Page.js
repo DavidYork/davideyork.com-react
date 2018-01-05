@@ -1,11 +1,7 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
 import { getRouteProps } from 'react-static'
-import styled from 'styled-components'
 import Banner from './Banner'
-
-const PageStyles = styled.div`
-`
 
 const contentStyles={
   maxWidth: '800px',
@@ -13,12 +9,12 @@ const contentStyles={
 }
 
 export default getRouteProps(( props ) => (
-  <PageStyles>
+  <div>
     <Banner image={ props.metadata.image }/>
     <Container>
       <div className='content' style={contentStyles}>
         <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
       </div>
     </Container>
-  </PageStyles>
+  </div>
 ))

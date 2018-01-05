@@ -10,7 +10,7 @@ const FooterStyles = styled.div`
   }
   .footer {
     color: #AAA;
-    background-color: #000;
+    background-color: #1b1c1d;
     font-family: 'Proxima Nova','Helvetica Neue',Helvetica,sans-serif;
     font-size: 15px;
     font-weight: 400;

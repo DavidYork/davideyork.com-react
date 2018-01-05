@@ -15,6 +15,7 @@ injectGlobal`
     margin: 0;
     padding: 0;
     color: #262626;
+    background-color: #1b1c1d;
   }
 
   h1 {
