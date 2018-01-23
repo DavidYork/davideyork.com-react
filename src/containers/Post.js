@@ -13,24 +13,30 @@ const PostStyles = styled.div`
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
+
+  .outer {
+    background-color: #fff;
+  }
 `
 
 export default getRouteProps(( props ) => {
   return (
     <PostStyles>
-      <Banner image={ props.metadata.image }/>
-      <Container >
-        <div className='content'>
-          <h1>{ props.metadata.title }</h1>
-          <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
-          <TagList tags={ props.metadata.tags } />
-          <ShareList />
-          <NextPrev
-            prev={ props.prev }
-            next={ props.next }
-          />
-        </div>
-      </Container>
+      <div className='outer'>
+        <Banner image={ props.metadata.image }/>
+        <Container>
+          <div className='content'>
+            <h1>{ props.metadata.title }</h1>
+            <div dangerouslySetInnerHTML={{ __html: props.markdown }} />
+            <TagList tags={ props.metadata.tags } />
+            <ShareList />
+            <NextPrev
+              prev={ props.prev }
+              next={ props.next }
+            />
+          </div>
+        </Container>
+      </div>
     </PostStyles>
   )
 })
