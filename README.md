@@ -1,9 +1,8 @@
-# React-Static - Styled-Components Example
+# davideyork.com implemented in React with [react-static](https://github.com/nozzle/react-static)
 
-This example includes:
-- Styled-Components
-- Image imports
-- File imports
-- Automatic Routing
+### Getting started
+`yarn start` - live updating of site, runs a local webserver
 
-To get started, run `react-static create` and use the `styled-components` template.
+`yarn build` - build the static site
+
+`yarn serve` - serve the static site once built

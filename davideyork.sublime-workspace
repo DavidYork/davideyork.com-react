@@ -520,22 +520,10 @@
 	"buffers":
 	[
 		{
-			"contents": "import React, { Component } from 'react'\nimport { Card } from 'semantic-ui-react'\nimport { Link } from 'react-static'\n\nexport default class PostCard extends Component {\n  render() {\n    const { href, image, header, description } = this.props;\n    return (\n      <Link to={ href }>\n        <Card\n          fluid\n          image={ image }\n          link\n          header={ header }\n          description={ description }\n        >\n        </Card>\n      </Link>\n    )\n  }\n}",
 			"file": "src/containers/PostCard.js",
-			"file_size": 508,
-			"file_write_time": 131589564930000000,
 			"settings":
 			{
-				"buffer_size": 469,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/posts/allPosts.js",
-			"settings":
-			{
-				"buffer_size": 812,
+				"buffer_size": 985,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -544,7 +532,7 @@
 			"file": "src/containers/Page.js",
 			"settings":
 			{
-				"buffer_size": 584,
+				"buffer_size": 553,
 				"line_ending": "Unix"
 			}
 		},
@@ -552,7 +540,7 @@
 			"file": "src/containers/Home.js",
 			"settings":
 			{
-				"buffer_size": 460,
+				"buffer_size": 672,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -561,7 +549,7 @@
 			"file": "src/containers/PostCardFlow.js",
 			"settings":
 			{
-				"buffer_size": 2674,
+				"buffer_size": 1284,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -578,7 +566,7 @@
 			"file": "static.config.js",
 			"settings":
 			{
-				"buffer_size": 2506,
+				"buffer_size": 5105,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -587,7 +575,7 @@
 			"file": "src/posts/2014-06-20-roblox.json",
 			"settings":
 			{
-				"buffer_size": 281,
+				"buffer_size": 273,
 				"line_ending": "Unix"
 			}
 		}
@@ -702,16 +690,11 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/daveman/Internal/Webdev/davideyork.com-react",
-		"/Users/daveman/Internal/Webdev/davideyork.com-react/public",
-		"/Users/daveman/Internal/Webdev/davideyork.com-react/public/content",
-		"/Users/daveman/Internal/Webdev/davideyork.com-react/public/css",
-		"/Users/daveman/Internal/Webdev/davideyork.com-react/src",
-		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers",
-		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/pages"
+		"/C/Users/Dave/Documents/Internal/Webdev/davideyork.com-react"
 	],
 	"file_history":
 	[
+		"/C/Users/Dave/Documents/Internal/Webdev/davideyork.com-react/src/posts/allPosts.js",
 		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/Home.js",
 		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/posts/allPosts.js",
 		"/Users/daveman/Internal/Webdev/davideyork.com-react/src/containers/FollowLink.js",
@@ -838,12 +821,11 @@
 		"/c/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/Combat/CardPlayPayload.cs",
 		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/PCG/RegionInfo.cs",
 		"/C/Users/Dave/Documents/Internal/src/drow-proto/DrowASCII/Code/RawTerminal.cs",
-		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/PCG/TestRegionGenerator.cs",
-		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/GameCore/GameState.cs"
+		"/C/Users/Dave/Documents/Internal/src/drow-proto/Assets/Scripts/PCG/TestRegionGenerator.cs"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -932,7 +914,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -941,9 +923,18 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 469,
+						"buffer_size": 985,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
 						},
 						"selection":
 						[
@@ -956,7 +947,8 @@
 						{
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/JSX/JSX.sublime-syntax",
-							"tab_size": 2
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -967,52 +959,11 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/posts/allPosts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 812,
-						"regions":
-						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
-						},
-						"selection":
-						[
-							[
-								105,
-								121
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"history_list_is_closing": true,
-							"syntax": "Packages/JSX/JSX.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "src/containers/Page.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 584,
+						"buffer_size": 553,
 						"regions":
 						{
 							"bookmarks":
@@ -1028,8 +979,8 @@
 						"selection":
 						[
 							[
-								187,
-								220
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1043,16 +994,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "src/containers/Home.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 460,
+						"buffer_size": 672,
 						"regions":
 						{
 							"bookmarks":
@@ -1068,15 +1019,16 @@
 						"selection":
 						[
 							[
-								414,
-								419
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/JSX/JSX.sublime-syntax",
-							"tab_size": 2
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1086,30 +1038,40 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "src/containers/PostCardFlow.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2674,
+						"buffer_size": 1284,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
 						},
 						"selection":
 						[
 							[
-								1601,
-								1601
+								962,
+								962
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/JSX/JSX.sublime-syntax",
-							"tab_size": 2
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 475.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1127,7 +1089,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 469,
+						"buffer_size": 985,
 						"regions":
 						{
 						},
@@ -1148,11 +1110,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "src/posts/2016-11-26-gengam-2016.json",
 					"semi_transient": false,
 					"settings":
@@ -1190,12 +1152,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "static.config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2506,
+						"buffer_size": 5105,
 						"regions":
 						{
 							"bookmarks":
@@ -1211,8 +1173,8 @@
 						"selection":
 						[
 							[
-								502,
-								502
+								3130,
+								3130
 							]
 						],
 						"settings":
@@ -1223,19 +1185,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 760.0,
+						"translation.y": 445.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "src/posts/2014-06-20-roblox.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 281,
+						"buffer_size": 273,
 						"regions":
 						{
 							"bookmarks":
@@ -1265,7 +1227,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1273,7 +1235,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 33.0
 	},
 	"input":
 	{
@@ -1299,7 +1261,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.445778997941,
 			1.0
 		],
 		"rows":
@@ -1333,7 +1295,7 @@
 	"project": "davideyork.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1875,7 +1837,7 @@
 		],
 		"width": 659.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1883,7 +1845,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 249.0,
+	"side_bar_width": 318.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
