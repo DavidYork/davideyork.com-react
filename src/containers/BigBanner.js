@@ -37,7 +37,7 @@ const BannerStyles = styled.div`
     padding: 5px;
   }
   .shadow {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .85));
+    background: linear-gradient(rgba(27, 27, 27, 0), rgba(27, 27, 27, 1));
     min-height: 400px;
     padding-top: 50px;
     padding-bottom: 50px;
