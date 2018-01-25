@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://davideyork.com</id>
+    <title>David York</title>
+    <updated>2018-01-25T22:36:52Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>David York</name>
+        <email>david@davideyork.com</email>
+        <uri>http://davideyork.com/about</uri>
+    </author>
+    <link rel="alternate" href="http://davideyork.com"/>
+    <link rel="self" href="http://davideyork.com/atom"/>
+    <subtitle>Personal blog of David York, software engineer and indie game developer.</subtitle>
+    <logo>http://davideyork.com/content/images/map-decorated-big-1-1.png</logo>
+    <icon>http://davideyork.com/favicon.ico</icon>
+</feed>

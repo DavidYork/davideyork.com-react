@@ -1,8 +1,8 @@
-// import fs from 'fs'
+import fs from 'fs'
 
-export default {
-  posts: [
-    // 'test',
+export default class SiteMetadata {
+
+  static posts = [
     '2016-11-26-gengam-2016',
     '2016-03-13-7drl-dont-go-out-the-airlock',
     '2016-03-01-procedural-generation-decorator',
@@ -21,9 +21,9 @@ export default {
     '2013-02-24-roguelike-in-unity',
     '2013-02-23-kumax',
     '2013-02-22-lode-runner-3d',
-  ],
+  ];
 
-  tags: [
+  static tags = [
     {
       tag: 'college',
       title: 'College',
@@ -78,5 +78,11 @@ export default {
       description: "Projects I've been a part of working in the games industry.",
       image: '/content/images/roblox-1.jpg'
     },
-  ]
+  ];
+
+  static metadata = SiteMetadata.posts.map( x => {
+    const filename = './src/posts/' + x + '.json';
+    const meta = fs.readFileSync(filename, 'utf-8');
+    return JSON.parse(meta);
+  });
 }

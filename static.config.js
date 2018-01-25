@@ -2,7 +2,8 @@ import fs from 'fs'
 import axios from 'axios'
 import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
-import siteMetadata from './src/siteMetadata'
+import SiteMetadata from './src/lib/siteMetadata'
+import rssGen from './src/lib/rssGen'
 
 const marked = require('marked')
 
@@ -10,60 +11,26 @@ export default {
 
   getSiteProps: () => ({
     title: 'React Static',
-    metadata: siteMetadata.posts.map( x => {
-      const filename = './src/posts/' + x + '.json';
-      const meta = fs.readFileSync(filename, 'utf-8');
-      return JSON.parse(meta);
-    })
+    metadata: SiteMetadata.metadata,
   }),
 
   siteRoot: 'http://davideyork.com',
 
   getRoutes: async () => {
 
-    var postMetadata = null;
-
-    var getAllPostMetadata = () => {
-      // Parse all the posts
-      if (postMetadata == null) {
-        postMetadata = siteMetadata.posts.map( x => {
-          const filename = './src/posts/' + x + '.json';
-          const fileData = fs.readFileSync(filename, 'utf-8');
-          var meta = JSON.parse(fileData);
-          meta['name'] = x;
-          return meta;
-        })
-      }
-
-      return postMetadata;
-    };
-
-    var getPostMetadata = (post) => {
-      var postMeta = getAllPostMetadata();
-
-      // Find the post
-      for (var i=0; i < postMeta.length; i++) {
-        if (postMeta[i].name == post) {
-          return postMeta[i];
-        }
-      }
-
-      return null;
-    };
-
     var getSiblings = (post) => {
       var idx = 0;
       var found = false;
-      for (var i = 0; i < siteMetadata.posts.length && !found; i++) {
-        if (post == siteMetadata.posts[i]) {
+      for (var i = 0; i < SiteMetadata.posts.length && !found; i++) {
+        if (post == SiteMetadata.posts[i]) {
           idx = i;
           found = true;
         }
       }
 
-      var prevIdx = (idx - 1 < 0) ? siteMetadata.posts.length - 1 : idx - 1;
-      var nextIdx = (idx + 1 >= siteMetadata.posts.length) ? 0 : idx + 1;
-      var metaData = getAllPostMetadata();
+      var prevIdx = (idx - 1 < 0) ? SiteMetadata.posts.length - 1 : idx - 1;
+      var nextIdx = (idx + 1 >= SiteMetadata.posts.length) ? 0 : idx + 1;
+      var metaData = SiteMetadata.metadata;
 
       var rv = {
         prev: metaData[prevIdx],
@@ -75,7 +42,7 @@ export default {
 
     var getPostsFromTag = (tag) => {
       var rv = [];
-      var meta = getAllPostMetadata();
+      var meta = SiteMetadata.metadata;
       for (var i = 0; i < meta.length; i++) {
         if ((meta[i].tags.indexOf(tag.tag) >= 0) || (meta[i].tags.indexOf(tag.title) >= 0)) {
           rv.push(meta[i]);
@@ -86,7 +53,7 @@ export default {
     };
 
     // These are top-level, not children of "domain.com/blog/..."
-    var postRoutes = siteMetadata.posts.map( x => {
+    var postRoutes = SiteMetadata.posts.map( x => {
       const meta = JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8'));
       const siblings = getSiblings(x);
       return {
@@ -104,7 +71,7 @@ export default {
     });
 
     // These are the tags that describe groups of posts
-    var tagRoutes = siteMetadata.tags.map( x => {
+    var tagRoutes = SiteMetadata.tags.map( x => {
       return {
         path: 'tags/' + x.tag,
         component: 'src/containers/TagFlow',
@@ -156,6 +123,14 @@ export default {
     const html = render(sheet.collectStyles(<Comp />))
     meta.styleTags = sheet.getStyleElement()
     return html
+  },
+
+  onBuild: () => {
+    rssGen.Generate();
+  },
+
+  onStart: ({ devServerConfig }) => {
+    rssGen.Generate();
   },
 
   Document: class CustomHtml extends Component {
