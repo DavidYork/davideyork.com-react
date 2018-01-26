@@ -10,7 +10,7 @@ const marked = require('marked')
 export default {
 
   getSiteProps: () => ({
-    title: 'React Static',
+    title: 'David York',
     metadata: SiteMetadata.metadata,
   }),
 
@@ -53,21 +53,20 @@ export default {
     };
 
     // These are top-level, not children of "domain.com/blog/..."
-    var postRoutes = SiteMetadata.posts.map( x => {
-      const meta = JSON.parse(fs.readFileSync('./src/posts/' + x + '.json', 'utf-8'));
-      const siblings = getSiblings(x);
+    var postRoutes = SiteMetadata.metadata.map( meta => {
+      const siblings = getSiblings(meta.postname);
       return {
         path: meta.route,
         component: 'src/containers/Post',
         getProps: () => {
           return {
-            markdown: marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8')),
+            markdown: meta.markdown,
             metadata: meta,
-            next: siblings.prev,
-            prev: siblings.next,
-          }
+            next:siblings.prev,
+            prev:siblings.next
+          };
         }
-      }
+      };
     });
 
     // These are the tags that describe groups of posts

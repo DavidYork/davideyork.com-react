@@ -3,8 +3,10 @@ import Feed from 'feed'
 import mkdirp from 'mkdirp'
 import siteMetadata from './siteMetadata'
 
+const maxNumArticlesInFeed = 100;
+
 const getFeed = () => {
-  let info = {
+  const info = {
     title: "David York",
     description: "Personal blog of David York, software engineer and indie game developer.",
     id: 'http://davideyork.com',
@@ -23,9 +25,20 @@ const getFeed = () => {
     ttl: 60,
   };
 
+  var feed = new Feed(info);
 
+  let posts = siteMetadata.metadata;
+  if (posts.length > maxNumArticlesInFeed) {
+    posts = posts.slice(0, maxNumArticlesInFeed);
+  }
 
-  return new Feed(info);
+  // posts.forEach(post => {
+  //   feed.addItem({
+  //     title: post.
+  //   })
+  // });
+
+  return feed;
 }
 
 const handleError = (err) => {

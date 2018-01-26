@@ -1,4 +1,5 @@
 import fs from 'fs'
+import marked from 'marked'
 
 export default class SiteMetadata {
 
@@ -83,6 +84,9 @@ export default class SiteMetadata {
   static metadata = SiteMetadata.posts.map( x => {
     const filename = './src/posts/' + x + '.json';
     const meta = fs.readFileSync(filename, 'utf-8');
-    return JSON.parse(meta);
+    var json = JSON.parse(meta);
+    json['postname'] = x;
+    json['markdown'] = marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8'));
+    return json;
   });
 }
