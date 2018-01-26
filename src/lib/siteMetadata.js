@@ -86,6 +86,7 @@ export default class SiteMetadata {
     const meta = fs.readFileSync(filename, 'utf-8');
     var json = JSON.parse(meta);
     json['postname'] = x;
+    json['url'] = 'http://davideyork.com/' + json.route;
     json['markdown'] = marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8'));
     return json;
   });

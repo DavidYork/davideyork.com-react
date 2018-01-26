@@ -6,6 +6,12 @@ import siteMetadata from './siteMetadata'
 const maxNumArticlesInFeed = 100;
 
 const getFeed = () => {
+  const author = {
+    name: 'David York',
+    email: 'david@davideyork.com',
+    link: 'http://davideyork.com/about'
+  };
+
   const info = {
     title: "David York",
     description: "Personal blog of David York, software engineer and indie game developer.",
@@ -17,11 +23,7 @@ const getFeed = () => {
       atom: 'http://davideyork.com/atom',
       rss: 'http://davideyork.com/rss'
     },
-    author: {
-      name: 'David York',
-      email: 'david@davideyork.com',
-      link: 'http://davideyork.com/about'
-    },
+    author: author,
     ttl: 60,
   };
 
@@ -32,11 +34,27 @@ const getFeed = () => {
     posts = posts.slice(0, maxNumArticlesInFeed);
   }
 
-  // posts.forEach(post => {
-  //   feed.addItem({
-  //     title: post.
-  //   })
-  // });
+  const tags = siteMetadata.tags;
+  tags.forEach(tag => {
+    feed.addCategory(tag.title.toLowerCase());
+  });
+
+  posts.forEach(post => {
+    console.log(post);
+    const postItem = {
+      title: post.title,
+      categories: post.tags,
+      description: post.oneLiner,
+      id: post.url,
+      author: author,
+      link: post.url,
+      image: 'http://davideyork.com' + post.image,
+      date: new Date(post.date),
+      content: post.markdown,
+    };
+
+    feed.addItem(postItem);
+  });
 
   return feed;
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>David York</title>
         <link>http://davideyork.com</link>
         <description>Personal blog of David York, software engineer and indie game developer.</description>
-        <lastBuildDate>Fri, 26 Jan 2018 00:52:56 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Jan 2018 18:01:19 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -12,6 +12,443 @@
             <url>http://davideyork.com/content/images/map-decorated-big-1-1.png</url>
             <link>http://davideyork.com</link>
         </image>
+        <category>college</category>
+        <category>game development</category>
+        <category>indie games</category>
+        <category>procedural generation</category>
+        <category>programming</category>
+        <category>projects</category>
+        <category>puzzle games</category>
+        <category>roguelike</category>
+        <category>work</category>
         <atom:link href="http://davideyork.com/atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[GenGam 2016]]></title>
+            <link>http://davideyork.com/gengam-2016</link>
+            <guid>http://davideyork.com/gengam-2016</guid>
+            <pubDate>Sat, 26 Nov 2016 11:20:00 GMT</pubDate>
+            <description><![CDATA[Procedurally generating sprites for the #GenJam 2016]]></description>
+            <content:encoded><![CDATA[<p>On November 19, 2016 in San Francisco, CA the first annual Gen Jam (procedural generation jam) was hosted at the awesome indie co-working space GameNest. The idea was to spend a Saturday creating an art generator, a &quot;thing that makes a thing&quot; if you will.</p>
+<p>I created a thing that made character sprites in the amazing style of Christopher &quot;Oryx&quot; Barrett&#39;s awesome Oryx Design Lab 16-bit Sprite Set. Have a look at some of the stuff it created:</p>
+<p><img src="/content/images/allSprites-2.png" alt="Generate Sprites"></p>
+<h1 id="master-plan">Master Plan</h1>
+<p>So essentially I took the character sprites, broke them down into pieces, normalize their color palette, and implemented an algorithm to recombine them to create new unique sprites.</p>
+<p>So I broke the source sprites up into pieces - helmets, heads, bodies, feet, weapons, etc and then selected those at random and stuck them back together. Then I changed the colors. Here is the main idea:</p>
+<p><img src="/content/images/Composite.png" alt="Building Sprites"></p>
+<h1 id="inputs">Inputs</h1>
+<p>The original sprites I used as reference from the 16-bit Sprite Set look like this (the original set of sprites is MASSIVE, this is a small sample of 5):</p>
+<p><img src="/content/images/OryxOriginalSprites.png" alt="Original Oryx 16-bit Fantasy Sprites"></p>
+<p>Then the sprites were broken up into eight groups: the torso, head, helmet, shield, feet, hair, weapon, and bow. Then I used Photoshop to cut out the pieces and place them into separate files like this:</p>
+<p><img src="/content/images/Components.png" alt="Sprite Components"></p>
+<p>The idea here is to have a bunch of different heads, a bunch of different weapons, a bunch of different shields, etc and combine them at random.</p>
+<h1 id="palette">Palette</h1>
+<p>I wanted to vary the colors in a way that respects the original care that went into the color palette, but also creates a lot of variety. The trick to this is to identify which colors were used on the different sprites, have them grouped together as a &quot;color ramp,&quot; and select color ramps to re-color the sprite pieces at random.</p>
+<p>In other words I went through and collected all the colors used for the skin tones, all the shades of green, blue, etc for cloth, all the colors used together for metals, and so on and placed them together in a palette file. A set of color ramps looks like this:</p>
+<p><img src="/content/images/GenJam-ColorRamp-1.png" alt="Color ramps"></p>
+<p>Then I took the sprites themselves and recolored them to use &quot;input colors,&quot; colors which could be replaced by colors from a color ramp. So if I had 3 shirts colored blue, green and red what I would do is make them all red, add color ramps for blue, green, and red in the palette file, and have the algorithm replace the reds with colors from a randomly selected color ramp.</p>
+<p>Here are some results:</p>
+<p><img src="/content/images/DudePalettes-2.png" alt="Colors Applied to Sprite"></p>
+<h1 id="materials">Materials</h1>
+<p>Materials are substances being drawn such as cloth, leather, metal, flesh, gemstones, etc. I needed different color ramps for different materials because only certain colors looked natural for certain material types. The colors that look good for metal, for example, don&#39;t look right for skin tones and vice versa.</p>
+<p>Additionally the variation between the colors in a ramp is different for different materials. Metal ramps for example vary a lot from light to dark within a ramp, whereas cloth does not.</p>
+<p>The palette ended up having sets of color ramps for the following materials: primary cloth, secondary cloth, hair, skin, metal, wood, leather, gemstone, and dark accent color.</p>
+<p>Here is the final palette:
+<img src="/content/images/GenJam-Palette.png" alt="Materials"></p>
+<h1 id="subject-grouping">Subject grouping</h1>
+<p>Grouping is where you take a collection of inputs and declare certain inputs as working well together and others not so much. For example you could have &quot;wizard sprites&quot; and &quot;warrior sprites,&quot; groups of sprites for different nations drawn with different aesthetic styles, good and evil groups, rich and poor groups, and so forth. This results in lots of options to generate sprites that are somewhat guided towards the aesthetic you want.</p>
+<h1 id="the-whole-shebang">The whole shebang</h1>
+<p>So, to summarize I did the following:</p>
+<p>Broke a large collection of sprites into pieces: weapons, heads, torsos, etc.
+Changed the input colors to &quot;standard&quot; colors for the materials (5 shades of cloth, 5 shades of metal, 4 shades of skin tone, etc).
+Wrote an algorithm to select one of each of the pieces and draw them on top of each other
+Wrote an algorithm to change the &quot;standard&quot; colors to one of several sets of colors (called &quot;color ramps&quot;) in the palette.
+That&#39;s it! This creates thousands of unique and interesting sprites.</p>
+<h1 id="github-conclusion-and-thanks">Github, Conclusion, and Thanks</h1>
+<p>This was a really fun way to spend a Saturday, and I would like to thank Galaxy Kate (Kate Compton) and Ben Grue (Ben McGraw) for organizing the event and the GameNest co-working space for hosting.</p>
+<p>You can download my code which implements this project on Github here. I wrote it in C# and it should be compatible with Unity. Note that I included a full palette and some sample images, but I didn&#39;t include all the original sprites or images created from the sprites from the 16-bit Sprite Set. You have to purchase those sprites from Christopher Barrett aka Oryx at Oryx Design Lab. They aren&#39;t separated into pieces, I did that myself. It&#39;s a massive sprite set and practically free, Oryx spent a ton of time on it and I recommend checking it out (no, I&#39;m not getting paid to say this).</p>
+<p>Have fun!</p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/allSprites-3.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Don't Go Out the Airlock (7DRL 2016)]]></title>
+            <link>http://davideyork.com/dont-go-out-the-airlock-7drl-2016</link>
+            <guid>http://davideyork.com/dont-go-out-the-airlock-7drl-2016</guid>
+            <pubDate>Sun, 13 Mar 2016 14:19:00 GMT</pubDate>
+            <description><![CDATA[I made a roguelike in 7 days for the 7DRL. It's about surviving in a spaceship that's decompressing.]]></description>
+            <content:encoded><![CDATA[<p>The <a href="http://www.roguebasin.com/index.php?title=7DRL">7DRL (7 Day Roguelike Challenge)</a> for 2016 has happened, and here is my entry!
+It was a challenge to create this game in 7 days, but I&#39;m quite proud of it.
+Of course, I feel I&#39;ve only scratched the surface of what the game could become with more time, effort and polish.</p>
+<p>The premise is you are lost in outer space in an escape pod.
+You get rescued, and to show your gratitude you offer to upgrade the ship&#39;s engines.</p>
+<p>Only problem is, you don&#39;t know how to do that so everything explodes.
+You have to get back to your escape pod before getting sucked out a hull breach or burnt alive!</p>
+<p><img src="/content/images/dgota-2.jpg" alt="Don't go out the Airlock intro" class="img-inline-left"><img src="/content/images/dgota-1.jpg" alt="Don't go out the Airlock gameplay" class="img-inline-right"></p>
+<p>The game is completely free and available for dowload for Windows and MacOS:</p>
+<p><a href="/downloads/DontGoOutTheAirlock.zip">Download PC version of Don&#39;t Go Out The Airlock</a></p>
+<p><a href="/downloads/DontGoOutTheAirlock.app.zip">Download Mac version of Don&#39;t Go Out The Airlock</a></p>
+<p>Have fun trying not to get blown into outer space!</p>
+<p>I would love to hear what you think of the game, feel free to contact me via twitter or email.</p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/dgota-1-1.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Making Procedural Content Look GREAT]]></title>
+            <link>http://davideyork.com/making-procedural-content-look-great</link>
+            <guid>http://davideyork.com/making-procedural-content-look-great</guid>
+            <pubDate>Wed, 02 Mar 2016 04:10:36 GMT</pubDate>
+            <description><![CDATA[This converts plain "walls and doors" output into something that looks awesome]]></description>
+            <content:encoded><![CDATA[<p>I&#39;m going to talk about how to get from images like these:</p>
+<p><img src="/content/images/map-ascii.png" alt="ASCII map" class="img-inline-left"><img src="/content/images/map-tiled.png" alt="Tiled map" class="img-inline-right"></p>
+<p>to this:</p>
+<p><img src="/content/images/map-decorated.png" alt="Decorated map"></p>
+<p>using what I call a <em>Decoration Generator</em>. The awesome tileset shown above was created by <a href="http://oryxdesignlab.com">Oryx Design Lab</a> and is fantastic, I highly recommend checking it out.</p>
+<p><strong>Note:</strong> I <strong>love ASCII</strong> games and this article isn&#39;t meant to imply that tile-based games are better than ASCII games. Not at all! Instead this article simply details a method to make tile-based games look great.</p>
+<h1 id="decoration-generator">Decoration Generator</h1>
+<p>A Decoration Generator is a generator that takes a level as input, and outputs a good looking version of it. Other procedural content generators do level layout, loot and monster placement, etc. first. After that has been done that output is sent to the Decoration Generator which figures out the cool looking details such as wall corners, alternate tiles, shadows, decorative blood splashes, etc.</p>
+<h3 id="decoration-is-single-stage-multi-pass">Decoration is single stage, multi pass</h3>
+<p>Decoration is <em>single stage</em>. This means you go through the stages of content generation (determine theme and difficulty, place rooms, place monsters, place items, etc.) before decorating, then do the decoration all at once.</p>
+<p>Decoration is generally <em>multi pass</em>. This means the Decoration Generator alters the dungeon in several passes applying a <em>Decoration Algorithm</em> during each pass.</p>
+<p>Examples of Decoration Algorithms include placing wall corners, replacing tiles with random alternatives, and placing cosmetic effects.</p>
+<p>I personally find implementing each pass individually makes for clean code and gives you the flexibility of turning some passes on and off and running others multiple times as desired.</p>
+<h3 id="decoration-algorithms">Decoration Algorithms</h3>
+<h4 id="random-replacement">Random Replacement</h4>
+<p>This algorithm is very simple.
+Each tile has several alternative tiles it could be replaced with. Iterate over every tile and for each one that has alternatives, randomly decide if it should be swapped out with an alternative tile and if so which one. The cracks in the floor in the dungeon room shown above were placed with this method.</p>
+<h4 id="autotiling">Autotiling</h4>
+<p>This algorithm was used on the walls and water to take care of corners and edges. For these tiles you check a tile&#39;s neighbers and you select the final tile based on which of the neighbors are of the same tile type.</p>
+<p>For example:</p>
+<p><img src="/content/images/map-autotile.png" alt="Autotiling"></p>
+<h4 id="shadow-casting">Shadow Casting</h4>
+<p>This algorithm places shadows on tiles.
+Essentially every tile type has a true/false state for each of the two questions:</p>
+<ul>
+<li>Can this tile cast a shadow?</li>
+<li>Can this tile receive a shadow?</li>
+</ul>
+<p>For every tile if it can receive a shadow, and the tile above it can cast a shadow, it&#39;s time to place a shadow.</p>
+<h3 id="keyhole-modifications">Keyhole modifications</h3>
+<p>These are small algorithms that scan for certain conditions and then do a small modification if those conditions are met.
+For example replacing ground with bridges, placing spiderwebs in corners, placing blood spatters and bones, etc. would qualify.
+There are simple algorithms that should be used only when appropriate - for example an algorithm to place spider webs is great in a crypt but terrible in a king&#39;s hall (unless the king is undead of course!)
+A couple examples of keyhole modifications include:</p>
+<h4 id="bridges">Bridges</h4>
+<p>If there is a ground tile with another ground above and beneath, but water to the left and right, make the ground tile a north-south bridge.
+If there is a ground tile with another ground to the left and right, but water above and below, make the ground tile an east-west bridge.</p>
+<h4 id="spiderwebs">Spiderwebs</h4>
+<p>If there is a ground tile with wall tiles above and to the right, place a top right corner spiderweb.
+If there is a ground tile with wall tiles above and to the left, place a top left corner spiderweb.</p>
+<h4 id="blood-splatters">Blood splatters</h4>
+<p>Pick a random ground cell.
+Place a random blood splatter on that cell.
+Place a random number of blood splatters in nerby cells (e.g. up to 1-3 splatter tiles, each 1-2 cells away).</p>
+<h4 id="bones">Bones</h4>
+<p>Find any large scary monsters.
+Place several (e.g. 2-5) bones tiles near the monster (e.g. 1-4 tiles away).</p>
+<h4 id="statues-and-other-stand-alone-walls-">Statues (and other stand-alone walls)</h4>
+<p>Find a wall that is surrounded by ground on all four sides.
+Replace the wall with a tile that look cool by itself.
+Examples of good stand-alone walls would be statues, pillars, wells, coffins, altars, tables, tombstones, braziers, thrones, computer consoles, etc.</p>
+<h2 id="final-thoughts">Final thoughts</h2>
+<h3 id="data-details">Data details</h3>
+<p>There are many ways of represented decorated cells as data.</p>
+<p>Two of my favorites are:</p>
+<ol>
+<li><p><strong>Lots of tiles method</strong>: You have a <code>wall</code> tile, a <code>wall2</code> tile, a <code>wall_northwest</code> tile, a <code>wall2_eastwest_damaged</code> tile, etc. This is a fine approach. In this case the majority of your tiles will never be generated by you level creation code, instead level layout places only <code>wall</code> tiles and the decorator then replaces them with <code>wall2</code>, <code>wall_northwest</code>, etc. tiles.</p>
+</li>
+<li><p><strong>Tile type and tile image method</strong>: Cells in your world have both a tile type and a tile image, but the mapping from types to images is one to many. Thus the type is <code>wall</code> but the image could be <code>wall_grey_alt2_northwest.png</code> or <code>wall_grey_damaged_south.png</code>. In this case your world generation places walls but leaves the images alone, and it is the responsibility of the Decoration Generator to assign out all the images.</p>
+</li>
+</ol>
+<h3 id="themes">Themes</h3>
+<p>One fun thing to do with Decoration Generators is to create <em>Decoration Themes</em>. A Decoration Theme is essentially a set of Decoraton Algorithms and tiles that look good when used together.</p>
+<p>For example a crypt theme would specify which walls are appropreate for a crypt, it would place coffins instead of statues and it would place lots of broken ground tiles, bones and spiderwebs.</p>
+<p>There are lots of things you can do here, but my one main piece of advice is to keep the decoration code as separate as possible from the layout / generation code. This keeps the entire procedural content code base cleaner and easier to work with.</p>
+<p><strong>Have fun!</strong></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/map-decorated-big.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Fractal Generation with Unity]]></title>
+            <link>http://davideyork.com/fractal-generation-with-unity</link>
+            <guid>http://davideyork.com/fractal-generation-with-unity</guid>
+            <pubDate>Thu, 22 Oct 2015 23:10:00 GMT</pubDate>
+            <description><![CDATA[This is a simple technique to create L-System fractals with Unity]]></description>
+            <content:encoded><![CDATA[<h3 id="l-system-fractals">L-system fractals</h3>
+<p>A was hanging out with my awesome friend <a href="http://www.anatomecha.com">Anatomecha</a> in one of Seattle&#39;s new super awesome, super hip, super gentrified edison-bulb-and-a-million-beers-on-tap bars.
+He showed me a system he had been working on to create l-system fractals with Unity using very simple properties of how Maya and Unity represent 3D models in 3D space.</p>
+<p>Best.</p>
+<p>Night.</p>
+<p>Ever!</p>
+<p>I like beer and fractals because they are both awesome, what can I say?</p>
+<p>For the uninitiated an L-system fractal is basically where you take a shape, lets call it an &quot;axiom&quot;, then you replace the axiom with another shape, let&#39;s call that a &quot;generator&quot; which just so happens to be made up of a bunch of axioms.</p>
+<p>Rinse and repeat until you have created a self-referential fractal of pure awesomeness.
+Each rinse and repeat is called an &quot;iteration.&quot;</p>
+<p><a href="https://en.wikipedia.org/wiki/L-system">Would you like to know more?</a></p>
+<p>So axiom, and generator:</p>
+<p><img class="img-inline-left" alt="L-system fractal axiom" src="/content/images/axiom.jpg"><img class="img-inline-right" alt="L-system fractal generator" src="/content/images/generator.jpg"></p>
+<p>which, in the cases of these pyramids creates what&#39;s called a <a href="https://www.google.com/search?q=sierpinski+pyramid">Sierpinski Pyramid</a>.</p>
+<p>For those of you <em>FRACTAL EXPERTS</em> out there there is nothing new yet.</p>
+<h3 id="awesomesauce">Awesomesauce</h3>
+<p>Here is the awesomesauce.</p>
+<p>Maya will let you create a model which contains named compenents in a hierarchy.
+Unity can import the model and preserve the hierarchy and the components.
+If you create a hierarchical model in Maya which is meant to be a generator, and you pick some of the components in that model&#39;s hierarchy to be axioms, then when you load it into Unity all you have to do to make an l-system fractal iteration on it is to find the leaf nodes and replace them with freshly instantiated generators.</p>
+<p>Piece of cake right?</p>
+<p>Essentially, yes.</p>
+<p>Note there are always details.
+The position, scale, and rotation of the models needs to be preserved.
+Notice how the Sierpinsky Pyramid replaces a large pyramid with four smaller ones at various offsets?</p>
+<p>Yes, these offsets and scale factors (and rotation as well) can be encoded in the Maya model trivially which will be explained now.</p>
+<h3 id="maya-representation-of-a-generator">Maya representation of a generator</h3>
+<p>So we are going to create this:
+<img src="/content/images/tree_of_glitch_truth.jpg" alt="L-system fractal tree"></p>
+<p>By creating the following two generators:</p>
+<p><img class="img-inline-left" alt="L-system fractal end branch generator" src="/content/images/endbranch.jpg"><img class="img-inline-right" alt="L-system fractal middle branch generator" src="/content/images/middlebranch.jpg"></p>
+<p>Left: end branch, right: middle branch.</p>
+<p>We then load them up in Unity and create a script that iterates <em>n</em> times over a <a href="http://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</a> looking for leaf nodes with a <em>name</em> that corresponds to the name of a generator.</p>
+<p>Then when you find one, you <a href="http://docs.unity3d.com/ScriptReference/Object.Destroy.html">Destroy</a> it and replace it with a newly <a href="http://docs.unity3d.com/ScriptReference/Object.Instantiate.html">Instantiated</a> instance of the generator of that name.</p>
+<p>So have a look at what this looks like in Unity, with an attached script:</p>
+<p><img src="/content/images/unity_tree.jpg" alt="L-system fractal tree setup in Unity"></p>
+<p>Notice the <a href="http://docs.unity3d.com/ScriptReference/GameObject-transform.html">Transform</a> in the <a href="http://docs.unity3d.com/Manual/Inspector.html">Inspector</a>.
+It contains the relative position, rotation and scale of an axiom.
+This means when you replace that axiom with a newly instantiated generator you will need to set the generator&#39;s <a href="http://docs.unity3d.com/ScriptReference/Transform-localScale.html">Local Scale</a>, <a href="http://docs.unity3d.com/ScriptReference/Transform-localRotation.html">Local Rotation</a> and <a href="http://docs.unity3d.com/ScriptReference/Transform-localPosition.html">Local Position</a> to these values so it will be in the right spot.</p>
+<p>Note the script has two <code>generators</code> listed, the <code>end_branch_generator</code> and <code>middle_branch_generator</code>. These are references to the models in the project, so during an iteration when a node is found with a name like <code>end_branch__0</code> the <code>LSystem.cs</code> script knows to replace it with a <code>end_branch</code> instance.</p>
+<p>You may notice the leaf nodes have names like <code>end_branch__0</code> with a double underscore - this is because Maya requires unique names for it&#39;s scene nodes so the script simply discards the <code>__</code> and everything after it during the iteration process.</p>
+<h3 id="so-">So....</h3>
+<p>So there is a lot you can do with this.</p>
+<p>Essentially you can build a model in Maya, name nodes, and then replace those nodes with other models that have the same name (or, if you prefer, by any more sophisticated replacement algorithm you choose) to recursively create and define a more interesting creation.</p>
+<p>Use your imagination and think on that for a minute, it&#39;s pretty huge.</p>
+<p><img class="img-inline-1-3" alt="L-system fractal tree iteration 0" src="/content/images/tree_0.jpg"><img class="img-inline-2-3" alt="L-system fractal tree iteration 1" src="/content/images/tree_1.jpg"><img class="img-inline-3-3" alt="L-system fractal tree iteration 2" src="/content/images/tree_2.jpg"></p>
+<p><strong>Have fun!</strong></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/unity_tree.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Procedural Generation: Drunken Walk]]></title>
+            <link>http://davideyork.com/drunken-walk-procedural-algorithm</link>
+            <guid>http://davideyork.com/drunken-walk-procedural-algorithm</guid>
+            <pubDate>Mon, 09 Feb 2015 04:10:36 GMT</pubDate>
+            <description><![CDATA[This is a fundamental technique for procedurally generating rooms and dungeons.]]></description>
+            <content:encoded><![CDATA[<p>This is a <strong>procedural generation technique</strong> that places open spaces on a grid. It can be used for generating <strong>dungeons</strong>, <strong>castles</strong>, and other environments for video games.</p>
+<p>Start with a solid grid, such as a 2D array of walls. Pick a starting point and mark that as open/empty. Move in a random direction if and only if the next cell in that direction is solid. Mark that as empty.</p>
+<p>Repeat until you are no longer able to move, or you have a large enough area that has been marked as empty that you are satisfied with the walk.</p>
+<div class="img-group">
+<img class="img-inline-left" alt="Drunken walk" src="/content/images/pcg_drunken_walk_single.gif"><img class="img-inline-right" alt="Drunken walk" src="/content/images/pcg_drunken_walk_single2.gif">
+</div>
+
+<p>You can use multiple walks to generate a more interesting area. The additional walks can start from an
+open cell, or they can start from a closed cell and be allowed to &quot;merge&quot; into an existing cell if they
+would intersect with the cell.</p>
+<div class="img-group">
+<img class="img-inline-left" alt="Drunken walks with 10 steps" src="/content/images/pcg_drunken_walk_multiple_10.gif"><img class="img-inline-right" alt="Drunken walks with 10 steps" src="/content/images/pcg_drunken_walk_multiple_10_2.gif">
+</div>
+
+<p>Note that this technique works well for generating areas that have open cells and wall cells as shown above, but it also works
+for generating an area with areas with clear adjoining exits (e.g.: rooms). Simply place an area in each visited cell and a
+connection leading from this cell the the previous one.</p>
+<div class="img-group">
+<img src="/content/images/pcg_drunken_walk_rooms_single.gif" alt="Drunken walks with adjoining areas">
+</div>
+
+<p>Multiple drunken walks with adjoining areas requires an extra step for each subsequent walk to join the walks together.
+One option is to start walks after the first in one of the previously visited rooms (shown below).</p>
+<div class="img-group">
+<img class="img-inline-left" alt="Drunken walks with adjoining areas" src="/content/images/pcg_drunken_walk_rooms_multiple_1.gif"><img class="img-inline-right" alt="Drunken walks with 15 steps" src="/content/images/pcg_drunken_walk_rooms_multiple_2.gif">
+</div>
+
+<p>That is the drunken walk. There are many ways to tweak it worth experimenting with. For example when determining the random
+direction you can give a bias towards choosing the direction of forward making the generated area have more long corridors.
+Another tweak is to randomly determine how many steps each walk will take, or to have the likelihood that a walk should end
+be determined by the distance from the starting point.</p>
+<p>Have fun with it!</p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/pcg_drunken_walk_rooms_single-1.gif">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Blocksworld]]></title>
+            <link>http://davideyork.com/blocksworld</link>
+            <guid>http://davideyork.com/blocksworld</guid>
+            <pubDate>Sat, 23 Aug 2014 20:10:36 GMT</pubDate>
+            <description><![CDATA[My work on Blocksworld, an awesome iPad building game for kids]]></description>
+            <content:encoded><![CDATA[<iframe class="embed-youtube" src="http://www.youtube.com/embed/6WrK-yxy90U" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="http://itunes.apple.com/us/app/blocksworld-hd/id665886336">Download from the Apple App Store here!</a></p>
+<p>I worked as a <strong>full-stack iOS + backend engineer</strong> on <a href="http://play.blocksworld.com/">Bocksworld</a>, creative block-based building game for kids by <a href="http://www.lindenlab.com/">Linden Lab</a>. This was is created with C# in <a href="http://unity3d.com/">Unity3D</a>, Objective-C, Ruby and MySQL.  I have contributed to all technical aspects of it&#39;s development.</p>
+<p><a href="http://play.blocksworld.com/">Blocksworld</a> has been enjoyed by millions of users who have created and shared <strong>millions of creations</strong>! Blocksworld is <a href="http://itunes.apple.com/us/app/blocksworld-hd/id665886336">available on the Apple app store</a>.</p>
+<p>Blocksworld is a free app with in-app purchases.</p>
+<p><img class="img-inline-left" alt="Popular creative block-based building game" src="/content/images/blocksworld1.jpg"><img class="img-inline-right" alt="Popular creative block-based building game" src="/content/images/blocksworld2.jpg">
+<img class="img-inline-left" alt="Popular creative block-based building game" src="/content/images/blocksworld4.jpg"><img class="img-inline-right" alt="Popular creative block-based building game" src="/content/images/blocksworld3.jpg"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/blocksworld1.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Patterns]]></title>
+            <link>http://davideyork.com/patterns</link>
+            <guid>http://davideyork.com/patterns</guid>
+            <pubDate>Sat, 23 Aug 2014 19:10:36 GMT</pubDate>
+            <description><![CDATA[My work on Patterns, a game that asks "what if Minecraft wasn't just cubes?"]]></description>
+            <content:encoded><![CDATA[<iframe class="embed-youtube" max-width="560" max-height="315" src="http://www.youtube.com/embed/u0TIGT1CSoA" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="http://store.steampowered.com/app/218980/">Click here to play Patterns now with Steam Early Access!</a></p>
+<p>I was an engineer on <a href="http://www.buildpatterns.com/">Patterns</a>, a multi-player open sandbox building game game made by <a href="http://www.freerangegames.com/">Free Range Games</a> and <a href="http://www.lindenlab.com/">Linden Lab</a>. This was a project created with <a href="http://unity3d.com/">Unity3D</a> for Mac and Windows PCs.</p>
+<p><a href="http://www.buildpatterns.com/">Patterns</a> is a large and ambitious project where users could build complex creations with dozens of different types of shapes. Players could add Lua scripts to their creations to create gamification mechanics and achieve high levels of customization.  Patterns is <a href="http://store.steampowered.com/app/218980/">available on Steam</a>.</p>
+<p><img class="img-inline-left" alt="Creative sandbox building" src="/content/images/patterns1.jpg"><img class="img-inline-right" alt="Creative sandbox building" src="/content/images/patterns2.jpg">
+<img class="img-inline-left" alt="Creative sandbox building" src="/content/images/patterns3.jpg"><img class="img-inline-right" alt="Creative sandbox building" src="/content/images/patterns4.jpg"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/patterns1.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Roblox]]></title>
+            <link>http://davideyork.com/roblox</link>
+            <guid>http://davideyork.com/roblox</guid>
+            <pubDate>Fri, 20 Jun 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[My work for ROBLOX, the world's #1 game-building platform for kids]]></description>
+            <content:encoded><![CDATA[<iframe class="embed-youtube" max-width="560" max-height="315" src="http://www.youtube.com/embed/LHdA7Yc-8Rg" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="http://play.google.com/store/apps/details?id=com.roblox.client">Download from the Google Play Store here!</a>
+<a href="http://itunes.apple.com/us/app/roblox-mobile/id431946152/">Download from the Apple App Store here!</a></p>
+<p>I was the <strong>mobile lead engineer</strong> on <a href="http://play.roblox.com/">Roblox</a>. I lead a five person which created the mobile version of <a href="http://play.roblox.com/">Roblox</a>, an extremely popular game that has spent time in the <strong>top-100 grossing apps</strong> on the iOS app store. <a href="http://itunes.apple.com/us/app/roblox-mobile/id431946152/">Roblox mobile</a> was created with Objective-C and C++.</p>
+<p><a href="http://play.roblox.com/">Roblox</a> has been enjoyed by millions of kids and has over <a href="https://venturebeat.com/2016/12/20/at-10-roblox-surpasses-30-million-monthly-users-and-300-million-hours-of-engagement/">30 million monthly active users</a>! Roblox is <a href="http://itunes.apple.com/us/app/roblox-mobile/id431946152/">available on the Apple app store</a> and <a href="http://play.google.com/store/apps/details?id=com.roblox.client">Google Play store</a>.</p>
+<p>Roblox is free with in-app purchases and premium subscriptions.</p>
+<p><img class="img-inline-left" alt="Popular creative block-based building game" src="/content/images/roblox1.jpg"><img class="img-inline-right" alt="Popular creative block-based building game" src="/content/images/roblox3.jpg">
+<img class="img-inline-left" alt="Popular creative block-based building game" src="/content/images/roblox4.jpg"><img class="img-inline-right" alt="Popular creative block-based building game" src="/content/images/roblox2.jpg"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/roblox3.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Mindless Dungeon Crawl]]></title>
+            <link>http://davideyork.com/mindless-dungeon-crawl</link>
+            <guid>http://davideyork.com/mindless-dungeon-crawl</guid>
+            <pubDate>Thu, 28 Feb 2013 10:53:14 GMT</pubDate>
+            <description><![CDATA[Utterly mindless somewhat hilarious rogue-like-ish-sorta for the iPhone]]></description>
+            <content:encoded><![CDATA[<p><a href="https://itunes.apple.com/us/app/mindless-dungeon-crawl/id571606982">Download from the Apple App Store here!</a></p>
+<p>I have a tradition of teaching myself a new programming language or technology by writing yet-another-version of <strong>“Mindless Dungeon Crawl (MDC).”</strong>  This tradition started when I was <strong>procrastinating</strong> my grad school compilers homework.  I have written MDC in Python, JavaScript, C++, C# with WinForms, Objective-C with iOS, C++ &amp; Objective-C on iOS with Cocos2D, C# with MonoTouch and finally Unity3D which is the version you see here.  Each time it’s a different game with graphics (sometimes it’s a text game) and different mechanics but it never takes itself seriously.</p>
+<p>This game was downloaded 800 times on its first day, was favorably reviewed by <a href="http://forums.toucharcade.com/showthread.php?t=163362">Touch Arcade</a> and gets a modest number of downloads daily.</p>
+<p>Creature artwork was licensed from <a href="http://www.cerberusart.com">Joe Calkins of Cerberus Art</a>.  Send him all your money, he earned it.  UI, backgrounds and fonts were me.</p>
+<p><img class="img-inline-left" alt="Mindless Dungeon Crawl: mindless adventure awaits!" src="/content/images/mdc1.jpg"><img class="img-inline-right" alt="Mindless Dungeon Crawl: endless mindless exploration!" src="/content/images/mdc2.jpg">
+<img class="img-inline-left" alt="Mindless Dungeon Crawl: LOOOOOOOT!" src="/content/images/mdc3.jpg"><img class="img-inline-right" alt="Mindless Dungeon Crawl: hilarious opponents galore!" src="/content/images/mdc4.jpg"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/mdc-cover.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Hack & Quest]]></title>
+            <link>http://davideyork.com/hack-and-quest</link>
+            <guid>http://davideyork.com/hack-and-quest</guid>
+            <pubDate>Wed, 27 Feb 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[Rogue-like for the iPad created in one month for the game monetization challenge]]></description>
+            <content:encoded><![CDATA[<p><a href="https://itunes.apple.com/us/app/hack-quest/id608247486">Download from the Apple App Store here!</a></p>
+<p>Ambitious iPad rogue-like inspired by the <a href="http://www.ludumdare.com/compo/2011/09/28/announcing-october-challenge-2011/">Game Monetization Challenge</a>.</p>
+<p>I created combinatorial loot using a scheme inspired by <a href="https://www.giantbomb.com/might-and-magic-iii-isles-of-terra/3030-12559/">Might and Magic 3: Isles of Terra</a>.  More powerful and flexible where it can select which type of leather your leather armor is made from, or what type of steel is in your chain mail, plus add adjectives and modifiers all of which change the stats and gold value of the items.</p>
+<p>Art was commissioned from <a href="http://lepixelists.deviantart.com/">Team LePixelists</a>.  They were awesome, did great work very quickly.  Treat them professionally and pay them well, you won’t regret it.</p>
+<p>Highlights include:</p>
+<ul>
+<li>Massive world with over 4 billion regions (same world, different starting locations each game)</li>
+<li>Climate and temperature with appropriate tilesets (snow, light snow, lighter snow, desert, etc)</li>
+<li>Hundreds of dungeons with increasing difficulty as you descend</li>
+<li>Several overland and dungeon generators (placing monsters in climate-appropriate areas)</li>
+<li>Procedurally generated loot (adjective, noun, construction material, etc). Similar to Might &amp; Magic 3 but more depth. So you can have an expertly-crafted flaming steel longsword or just an iron longsword.</li>
+<li>Procedurally generated monsters (which also level up as necessary for deeper dungeon levels)</li>
+<li>RPG stats, chests, leveling system, combat mechanics</li>
+<li>Stack-based UI menu system</li>
+</ul>
+<p><img class="img-inline-left" alt="Hack & Quest &quot;You got loot!&quot;" src="/content/images/hq_screenshot1.jpg"><img class="img-inline-right" alt="Hack & Quest Player stats" src="/content/images/hq_screenshot2.jpg">
+<img class="img-inline-left" alt="Hack & Quest &quot;Mad loot!&quot;" src="/content/images/hq_screenshot3.jpg"><img class="img-inline-right" alt="Hack & Quest desert landscape" src="/content/images/hq_screenshot4.jpg">
+<img class="img-inline-left" alt="Hack & Quest tundra landscape" src="/content/images/hq_screenshot5.jpg"><img class="img-inline-right" alt="Hack & Quest &quot;Death sucks!&quot;" src="/content/images/hq_screenshot6.jpg"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/hq_screenshot6.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Morty the Mole]]></title>
+            <link>http://davideyork.com/morty-the-mole</link>
+            <guid>http://davideyork.com/morty-the-mole</guid>
+            <pubDate>Tue, 26 Feb 2013 16:53:14 GMT</pubDate>
+            <description><![CDATA[A big, semi-casual game with a terrible name made in the early days of indie game development.]]></description>
+            <content:encoded><![CDATA[<p>Commercially downloadable semi-casual puzzle game based loosely on Broderbund’s amazing Boulderdash.  I removed the monsters and added lots more puzzle elements (keys and doors, breakable walls, moveable breakable vases, vines that can hold up moveable objects, etc).  I felt this made it more appropriate for a semi-casual audience (all the rage at the time) and played more to the strengths of the game.  I did the design, programming, and project management.  Art and music was commissioned and licensed.</p>
+<p>Original fully playable prototype was written in Python, later a C++ port was created.  Currently it is not available for download as I am porting it to a Steam + iOS re-release.</p>
+<p>Highlights include:</p>
+<ul>
+<li>101 levels</li>
+<li>Multiple level themes (ice, desert, jungle, etc)</li>
+<li>Animated tiles, particle effects, sfx galore!</li>
+<li>Rewards for completing levels in a small number of moves</li>
+<li>Hundreds of unique tiles</li>
+</ul>
+<p><img class="img-inline-left" alt="Over 100 levels" src="/content/images/morty1.jpg"><img class="img-inline-right" alt="Tutorial levels guide the player early on" src="/content/images/morty2.jpg">
+<img class="img-inline-left" alt="Many themes exist" src="/content/images/morty3.jpg"><img class="img-inline-right" alt="Complex puzzle components keep the player interested" src="/content/images/morty4.png"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/morty2-1.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Real-time Voxel Heightmap Engine]]></title>
+            <link>http://davideyork.com/real-time-voxel-heightmap-engine</link>
+            <guid>http://davideyork.com/real-time-voxel-heightmap-engine</guid>
+            <pubDate>Mon, 25 Feb 2013 23:53:14 GMT</pubDate>
+            <description><![CDATA[Real-time endless voxel landscape you can fly over]]></description>
+            <content:encoded><![CDATA[<p>Voxel-based graphics engine. Written in C++ and x86 assembly. High-performance “fly-through” engine created just for fun during college.</p>
+<p>I thought it would be cool to play with voxel heightmaps so I created a voxel heightmap renderer in C++.  Uses raycasting, sorta.  Ground-traversal raycasting where you drop a ray directly to the ground from the viewer, then move it forward along the ground from the viewer.  Each time it “moves up” (intersects with higher elevation) it draws the appropriate pixels on the screen as determined by a colormap that accompanied the voxel heightmap.</p>
+<p>Note this was long before <a href="http://minecraft.net/">Minecraft</a>, before <a href="http://www.delvergame.com/">Delver</a> and certainly before <a href="http://en.wikipedia.org/wiki/Voxel">Voxels</a> were cool.</p>
+<p><img class='img-inline-left' alt="Real-time voxel heightmap" src="/content/images/voxels1.jpg"><img class='img-inline-right' alt="My voxels are smaller than Minecraft :)" src="/content/images/voxels2.jpg"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/voxels-banner.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Rogue-like in Unity3D]]></title>
+            <link>http://davideyork.com/roguelike-in-unity</link>
+            <guid>http://davideyork.com/roguelike-in-unity</guid>
+            <pubDate>Sun, 24 Feb 2013 08:53:14 GMT</pubDate>
+            <description><![CDATA[A 3D rogue-like made in Unity3D featuring mad loot and a class-based RPG progression system]]></description>
+            <content:encoded><![CDATA[<p>I love <a href="http://unity3d.com">Unity</a>!  One of my favorite aspects of Unity is my ability to work collaboratively with my Maya friends on creative projects.  This is one such example.  We were just screwing around in Unity for the hell of it.  I wrote the code, my friend created hundreds of assets and animations in a single weekend.  We made a 3D Rogue-like.  Highlights include:</p>
+<ul>
+<li>Multiple character classes</li>
+<li>Unlockable prestige classes</li>
+<li>Mad loot galore! Equippable to different equip targets (e.g. hands, head, body, finger, etc)</li>
+<li>Pretty standard RPG stats and progression</li>
+<li>Spells with areas of effects and complex behavior</li>
+<li>Randomly generated levels using several different generators</li>
+<li>Dynamic line of sight</li>
+</ul>
+<p>It was just two friends creating something for the moment, it was never publicly released.</p>
+<p><img src="/content/images/unity3droguelike.jpg" alt="Unity 3D rogue-like"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/unity3droguelike.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[KumaX (University Computer Game Design Group Project)]]></title>
+            <link>http://davideyork.com/kumax</link>
+            <guid>http://davideyork.com/kumax</guid>
+            <pubDate>Sat, 23 Feb 2013 21:53:14 GMT</pubDate>
+            <description><![CDATA[A multiplayer computer version of the boardgame Twixt]]></description>
+            <content:encoded><![CDATA[<p>While at college I founded (with my awesome friend <a href="https://halo.bungie.net/Inside/MeetTheTeam.aspx?Person=williams">Mike Williams</a> who now works at <a href="http://www.bungie.net">Bungie</a>) the Computer Game Design Group which at its peak had around 30 members. During our first year we tried to make the <strong>MOST AMBITIOUS GAME EVER ™</strong> which resulted in a whole lot of talking about the <strong>MOST AMBITIOUS GAME EVER ™</strong> but not a lot of actually making the <strong>MOST AMBITIOUS GAME EVER ™</strong>. We learned from this experience so during the second year we split into 3 teams and created small simpler games. I worked with a team of four on a game called KumaX which is based on the old boardgame <a href="https://boardgamegeek.com/boardgame/949/twixt">Twixt</a>. It was implemented in DirectX and works with hotseat or over a network.</p>
+<p><img src="/content/images/kumax.jpg" alt="KumaX: a college interpretation of TwixT"></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/kumax.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Lode Runner (3D Interpretation)]]></title>
+            <link>http://davideyork.com/lode-runner-3d-interpretation</link>
+            <guid>http://davideyork.com/lode-runner-3d-interpretation</guid>
+            <pubDate>Fri, 22 Feb 2013 22:53:14 GMT</pubDate>
+            <description><![CDATA[A 2.5D Lode Runner game made back in college.]]></description>
+            <content:encoded><![CDATA[<p>I used to play the amazing Broderbund game <a href="http://www.loderunnerclassic.com/">Lode Runner</a> when I was a wee lad.  The best part – you could make your own levels using their level editor.  Endless hours of fun creating really entertaining platform puzzles.</p>
+<p>During college for a programming class which covered, amongst other things, Win32 programming I developed a 3D Lode Runner game with my friend <a href="http://blog.alpineinstitute.com/2009/08/altitude-tribute-to-ryan-triplett.html">Ryan Triplett</a>.  Well, okay, it’s more of a 2.5D game.  Uses Win32, Windows GDI.</p>
+<p><img src='/content/images/loderunner1.png' alt='LodeRunner gameplay' class='img-inline-left'><img src='/content/images/loderunner2.jpg' alt='LodeRunner gameplay' class='img-inline-right'></p>
+]]></content:encoded>
+            <enclosure url="http://davideyork.com/content/images/loderunner-banner.jpg">
+            </enclosure>
+        </item>
     </channel>
 </rss>
