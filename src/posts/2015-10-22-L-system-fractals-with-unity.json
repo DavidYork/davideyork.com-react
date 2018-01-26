@@ -4,5 +4,6 @@
     "oneLiner": "This is a simple technique to create L-System fractals with Unity",
     "date": "2015-10-22 16:10:00",
     "image": "/content/images/unity_tree.jpg",
-    "tags": ["Procedural Generation", "Programming", "Fractals"]
+    "tags": ["Procedural Generation", "Programming"],
+    "guid": "22a12878-a272-413c-ac03-72484737f8db"
 }

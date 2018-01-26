@@ -35,11 +35,14 @@ export default function (props) {
     )
   }
 
+  // Create an array of <Link>s separated by commas
   function tagList(tags) {
-    const sublist = tags.splice(0, tags.length - 1);
-    const last = tags[tags.length - 1];
-    var rv = sublist.map( (tag) => getTag(tag, ', ' ));
-    rv.push(getTag(last, ''));
+    let rv = [];
+    for (var i = 0; i < tags.length; i++) {
+      const separator = (i == tags.length - 1) ? ', ' : '';
+      rv.push(getTag(tags[i], separator));
+    }
+
     return rv;
   }
 
