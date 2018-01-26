@@ -29,7 +29,7 @@ export default function (props) {
   }
 
   function getTag(tag, append) {
-    const target = '/tags/' + sanitize(tag) + '/'
+    const target = '/tag/' + sanitize(tag) + '/'
     return (
       <Link key={ target } to={ target } key={ tag } >{ tag }{ append }</Link>
     )
@@ -39,7 +39,7 @@ export default function (props) {
   function tagList(tags) {
     let rv = [];
     for (var i = 0; i < tags.length; i++) {
-      const separator = (i == tags.length - 1) ? ', ' : '';
+      const separator = (i == tags.length - 1) ? '' : ', ';
       rv.push(getTag(tags[i], separator));
     }
 

@@ -22,20 +22,7 @@ const getFeed = () => {
     webMaster: 'david@davideyork.com',
     language: 'en-us',
     categories: categories,
-    // pubDate: new Date(),???
     ttl: 60,
-
-
-
-    // id: 'http://davideyork.com',
-    // link: 'http://davideyork.com',
-    // favicon: 'http://davideyork.com/favicon.ico',
-    // feedLinks: {
-    //   atom: 'http://davideyork.com/atom',
-    //   rss: 'http://davideyork.com/rss'
-    // },
-    // author: author,
-    // ttl: 60,
   };
 
   let feed = new RSS(info);

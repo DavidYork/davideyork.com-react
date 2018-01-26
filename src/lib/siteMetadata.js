@@ -88,8 +88,6 @@ export default class SiteMetadata {
     json['postname'] = x;
     json['url'] = 'http://davideyork.com/' + json.route;
     json['markdown'] = marked(fs.readFileSync('./src/posts/' + x + '.md', 'utf-8'));
-
-    console.log(json);
     return json;
   });
 }

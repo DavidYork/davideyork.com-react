@@ -72,7 +72,7 @@ export default {
     // These are the tags that describe groups of posts
     var tagRoutes = SiteMetadata.tags.map( x => {
       return {
-        path: 'tags/' + x.tag,
+        path: 'tag/' + x.tag,
         component: 'src/containers/TagFlow',
         getProps: () => {
           var props = {
