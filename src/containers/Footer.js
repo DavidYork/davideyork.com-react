@@ -71,7 +71,7 @@ export default () => (
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <div className="copyright">© 2017 David York</div>
+        <div className="copyright">© 2018 David York</div>
       </div>
       </Container>
     </div>
