@@ -54,7 +54,8 @@ export default function (props) {
   return (
     <TagListStyles>
       <div className='shareList'>
-        <span className="heading">Share this article{ shareTargets.map( share ) }</span>
+        {/*<span className="heading">Share this article{ shareTargets.map( share ) }</span>*/}
+        <hr />
       </div>
     </TagListStyles>
   )
