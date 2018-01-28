@@ -11,6 +11,12 @@ const TopNavStyles = styled.div`
     line-height: 2em;
     color: #AAA
   }
+
+  .hide-on-mobile {
+    @media (max-width:768px) {
+      display: none;
+    }
+  }
 `
 
 export default class TopNav extends Component {
@@ -21,7 +27,7 @@ export default class TopNav extends Component {
 
     return (
       <TopNavStyles>
-        <nav>
+        <nav class='hide-on-mobile' >
           <Menu stackable inverted fixed='top' >
             <Menu.Item as={ Link } to='/' name='home' />
             <Menu.Item as={ Link } to='/tag/indie-games' name='indie'>Indie Gamedev</Menu.Item>
