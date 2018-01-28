@@ -33,7 +33,7 @@ export default class TopNav extends Component {
               <FollowIcon to='http://twitter.com/DavemanInSF' name='twitter' />
               <FollowIcon to='http://www.linkedin.com/in/davideyork' name='linkedin' />
               <FollowIcon to='mailto:david@davideyork.com' name='mail' />
-              <FollowIcon to='/rss' name='rss' />
+              <FollowIcon to='/rss' name='rss' type='application/rss+xml' />
             </Menu.Menu>
           </Menu>
         </nav>

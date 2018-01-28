@@ -25,7 +25,7 @@ export default class FollowLink extends Component {
     return (
       <FollowLinkStyles>
         <p>
-          <Link to={ this.props.to }>
+          <Link to={ this.props.to } type={ this.props.type } >
             <Icon link name={ this.props.name } size='huge' />
             <span className='link-text'>{ this.props.text }</span>
           </Link>

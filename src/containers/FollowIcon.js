@@ -18,7 +18,7 @@ const FollowIconStyles = styled.span`
 export default function (props) {
   return (
     <FollowIconStyles>
-      <Link to={ props.to }>
+      <Link to={ props.to } type={ props.type } >
         <Icon name={ props.name } size='large' />
       </Link>
     </FollowIconStyles>
