@@ -6,6 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=localhost react-static start",
     "build": "NODE_ENV=production react-static build",
+    "build-develop":  "NODE_ENV=develop react-static build",
     "build-local": "NODE_ENV=localhost react-static build",
     "build-staging": "NODE_ENV=staging react-static build",
     "build-production": "NODE_ENV=production react-static build",

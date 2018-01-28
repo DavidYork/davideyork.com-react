@@ -17,6 +17,12 @@ const TopNavStyles = styled.div`
       display: none;
     }
   }
+
+  .show-on-modile {
+    @media (min-width:769px) {
+      display: none;
+    }
+  }
 `
 
 export default class TopNav extends Component {
@@ -27,7 +33,7 @@ export default class TopNav extends Component {
 
     return (
       <TopNavStyles>
-        <nav class='hide-on-mobile' >
+        <nav className='hide-on-mobile' >
           <Menu stackable inverted fixed='top' >
             <Menu.Item as={ Link } to='/' name='home' />
             <Menu.Item as={ Link } to='/tag/indie-games' name='indie'>Indie Gamedev</Menu.Item>
@@ -41,6 +47,17 @@ export default class TopNav extends Component {
               <FollowIcon to='mailto:david@davideyork.com' name='mail' />
               <FollowIcon to='/rss' name='rss' type='application/rss+xml' />
             </Menu.Menu>
+          </Menu>
+        </nav>
+        <nav className='show-on-mobile' >
+          <Menu inverted >
+            <FollowIcon to='/' name='home' />
+          <Menu.Menu position='right'>
+            <FollowIcon to='http://twitter.com/DavemanInSF' name='twitter' />
+            <FollowIcon to='http://www.linkedin.com/in/davideyork' name='linkedin' />
+            <FollowIcon to='mailto:david@davideyork.com' name='mail' />
+            <FollowIcon to='/rss' name='rss' type='application/rss+xml' />
+          </Menu.Menu>
           </Menu>
         </nav>
       </TopNavStyles>
