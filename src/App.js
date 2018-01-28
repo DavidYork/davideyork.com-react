@@ -5,6 +5,7 @@ import styled, { injectGlobal } from 'styled-components'
 import Routes from 'react-static-routes'
 import Footer from './containers/Footer'
 import TopNav from './containers/TopNav'
+import style from './lib/style'
 
 injectGlobal`
   body {
@@ -15,7 +16,7 @@ injectGlobal`
     margin: 0;
     padding: 0;
     color: #262626;
-    background-color: #1b1c1d;
+    background-color: ${style.backgroundColor};
   }
 
   h1 {

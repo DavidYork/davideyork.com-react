@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Grid, Container } from 'semantic-ui-react'
 import FollowLink from './FollowLink'
+import style from '../lib/style'
 
 const FooterStyles = styled.div`
   .copyright {
@@ -10,7 +11,7 @@ const FooterStyles = styled.div`
   }
   .footer {
     color: #AAA;
-    background-color: #1b1c1d;
+    background-color: ${style.backgroundColor};
     font-family: 'Proxima Nova','Helvetica Neue',Helvetica,sans-serif;
     font-size: 15px;
     font-weight: 400;
