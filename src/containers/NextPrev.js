@@ -12,7 +12,6 @@ const NextPrevStyles = styled.div`
 
 export default class NextPrev extends Component {
   showCard(meta, label) {
-    console.log(meta.route);
     return (
       <Link to={ '/' + meta.route } >
         <Card link fluid >
