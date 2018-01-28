@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { Link } from 'react-static'
+import style from '../lib/style'
 
 const FollowLinkStyles = styled.div`
   p {
@@ -12,7 +13,7 @@ const FollowLinkStyles = styled.div`
     color: #666;
   }
   a:hover {
-    color: #4183c4; // TODO: Get from semantic-ui-react
+    color: ${style.hoverColor};
   }
   .link-text {
     font-size: 20px;

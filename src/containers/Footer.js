@@ -38,7 +38,7 @@ const FooterStyles = styled.div`
     color: #AAA;
   }
   a:hover {
-    color: #4183c4; // TODO: Get from semantic-ui-react
+    color: ${style.hoverColor};
   }
   .link-text {
     font-size: 20px;

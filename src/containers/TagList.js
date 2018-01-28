@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { Link } from 'react-static'
+import style from '../lib/style'
 
 const TagListStyles = styled.div`
   a {
@@ -11,7 +12,7 @@ const TagListStyles = styled.div`
     line-height: 25px;
   }
   a:hover {
-    color: #4183c4; // TODO: Get from semantic-ui-react
+    color: ${style.hoverColor};
   }
   .taglist {
     margin-top: 20px;

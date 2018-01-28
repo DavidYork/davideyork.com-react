@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { Link } from 'react-static'
+import style from '../lib/style'
 
 const FollowIconStyles = styled.span`
   i {
@@ -9,7 +10,7 @@ const FollowIconStyles = styled.span`
     color: #000;
   }
   i:hover {
-    color: #4183c4; // TODO: Get from semantic-ui-react
+    color: ${style.hoverColor};
   }
   span {
     float:right;
