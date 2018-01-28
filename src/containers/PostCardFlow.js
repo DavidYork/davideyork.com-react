@@ -42,7 +42,7 @@ export default class PostCardFlow extends Component {
     const posts = this.props.posts;
     var postSets = [];
     for (var i = 0; i < posts.length; i+=PostCardFlow.numColumns) {
-      postSets.push(posts.slice(i, i+3));
+      postSets.push(posts.slice(i, i+3).reverse());
     }
 
     return (
