@@ -2,6 +2,7 @@ import fs from 'fs'
 import RSS from 'rss'
 import mkdirp from 'mkdirp'
 import siteMetadata from './siteMetadata'
+import Env from '../../env'
 
 const maxNumArticlesInFeed = 100;
 
@@ -16,9 +17,9 @@ const getFeed = () => {
   const info = {
     title: "David York",
     description: "Personal blog of David York, software engineer and indie game developer.",
-    feed_url: 'http://davideyork.com/rss',
-    site_url: 'http://davideyork.com',
-    image_url: 'http://davideyork.com/content/images/map-decorated-big-1-1.png',
+    feed_url: Env.siteRoot + '/rss',
+    site_url: Env.siteRoot,
+    image_url: Env.siteRoot + '/content/images/map-decorated-big-1-1.png',
     webMaster: 'david@davideyork.com',
     language: 'en-us',
     categories: categories,
@@ -44,7 +45,7 @@ const getFeed = () => {
       guid: post.guid,
       author: "David York",
       link: post.url,
-      image: 'http://davideyork.com' + post.image,
+      image: Env.siteRoot + post.image,
       date: new Date(post.date),
       custom_elements: [
         { 'content:encoded': { _cdata: post.markdown } }

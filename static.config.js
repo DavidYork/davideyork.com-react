@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 import SiteMetadata from './src/lib/siteMetadata'
 import rssGen from './src/lib/rssGen'
+import Env from './env'
 
 const marked = require('marked')
 
@@ -14,7 +15,7 @@ export default {
     metadata: SiteMetadata.metadata,
   }),
 
-  siteRoot: 'http://davideyork.com',
+  siteRoot: Env.siteRoot,
 
   getRoutes: async () => {
 

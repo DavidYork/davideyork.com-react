@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Button, Image } from 'semantic-ui-react'
 import { Link } from 'react-static'
+import Env from '../../env'
 
 const BannerStyles = styled.div`
   .banner {
@@ -52,7 +53,7 @@ export default class BigBanner extends Component {
   static defaultProps = {
     title: 'David York',
     description: 'Personal blog of David York, software engineer and indie game developer.',
-    image: 'http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png',
+    image: Env.siteRoot + '/content/images/map-decorated-big-1-5.png',
     hideFace: false,
     link: undefined,
     linkText: ''

@@ -66,7 +66,7 @@ export default () => (
                 <FollowLink to='http://twitter.com/DavemanInSF' name='twitter' text='@DavemanInSF' />
                 <FollowLink to='http://www.linkedin.com/in/davideyork' name='linkedin' text='David York' />
                 <FollowLink to='mailto:david@davideyork.com' name='mail' text='david@davideyork.com' />
-                <FollowLink to='/rss' name='rss' text='RSS feed' />
+                <FollowLink to='/rss' name='rss' text='RSS feed' type='application/rss+xml' />
               </div>
             </Grid.Column>
           </Grid.Row>

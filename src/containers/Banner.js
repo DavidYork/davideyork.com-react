@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import Env from '../../env'
 
 const BannerStyles = styled.div`
   .cover-image {
@@ -9,7 +10,6 @@ const BannerStyles = styled.div`
     background-attachment: fixed;
   }
   .shadow {
-    // background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .95));
     min-height: 240px;
   }
 `
@@ -17,12 +17,12 @@ const BannerStyles = styled.div`
 export default class Banner extends Component {
 
   static defaultProps = {
-    image: 'http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png'
+    image: Env.siteRoot + '/content/images/map-decorated-big-1-5.png'
   };
 
   render() {
     const coverImageStyle = {
-      backgroundImage: 'url(' + this.props.image + ')'// 'url(http://davideyork.com/content/images/2016/10/map-decorated-big-1-5.png)',
+      backgroundImage: 'url(' + this.props.image + ')'
     }
 
     return (

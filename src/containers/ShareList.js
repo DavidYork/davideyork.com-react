@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { Link } from 'react-static'
 import FollowIcon from './FollowIcon'
+import Env from '../../env'
 
 const TagListStyles = styled.div`
   .heading {
@@ -25,23 +26,23 @@ const TagListStyles = styled.div`
 
 const shareTargets = [
   {
-    to:'https://www.facebook.com/sharer/sharer.php?u=http://davideyork.com/gengam-2016/',
+    to:'https://www.facebook.com/sharer/sharer.php?u=' + Env.siteRoot + '/gengam-2016/',
     name:'facebook'
   },
   {
-    to:'https://twitter.com/share?text=GenGam%202016&url=http://davideyork.com/gengam-2016/',
+    to:'https://twitter.com/share?text=GenGam%202016&url=' + Env.siteRoot + '/gengam-2016/',
     name:'twitter'
   },
   {
-    to:'https://plus.google.com/share?url=http://davideyork.com/gengam-2016/',
+    to:'https://plus.google.com/share?url=' + Env.siteRoot + '/gengam-2016/',
     name:'google plus square'
   },
   {
-    to:'http://reddit.com/submit?url=http://davideyork.com/gengam-2016/&title=GenGam%202016',
+    to:'http://reddit.com/submit?url=' + Env.siteRoot + '/gengam-2016/&title=GenGam%202016',
     name:'reddit'
   },
   {
-    to:'http://www.linkedin.com/shareArticle?mini=true&url=http://davideyork.com/gengam-2016/',
+    to:'http://www.linkedin.com/shareArticle?mini=true&url=' + Env.siteRoot + '/gengam-2016/',
     name:'linkedin'
   },
 ];
